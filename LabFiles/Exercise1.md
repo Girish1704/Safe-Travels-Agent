@@ -138,17 +138,19 @@ In this task, you will publish your Safe Travels agent and deploy it to Microsof
 
 1. After testing, click the **Publish** button in the top-right corner of the agent interface to begin the publishing process.
 
-   ![Open Agent Chat](../media/ex1-travel-g27.png)
+   ![Navigate to Channels](../media/ex1-travel-g21.png)
 
 1. In the publish dialog, review the publishing details and click **Publish** to confirm and publish your agent.
 
+   ![Open Agent Chat](../media/ex1-travel-g27.png)
+   
    ![Publish Confirmation](../media/ex1-travel-g20.png)
 
    > **Publishing Process:** The agent will be packaged and made available for channel deployment. This process may take a few moments to complete.
 
 1. Once published successfully, navigate to the **Channels** section to configure deployment channels for your agent.
 
-   ![Navigate to Channels](../media/ex1-travel-g21.png)
+   ![Agent Response in Teams](../media/ex1-travel-g29.png)
 
 1. In the Channels interface, you'll see available deployment options. Select **Microsoft Teams** to deploy your agent to Teams.
 
@@ -186,7 +188,7 @@ In this task, you will publish your Safe Travels agent and deploy it to Microsof
 
 1. Verify that the agent responds appropriately within the Teams environment, maintaining the same functionality as in the Copilot Studio test environment.
 
-   ![Agent Response in Teams](../media/ex1-travel-g29.png)
+
 
    > **Integration Success:** The agent should provide consistent responses regardless of the access channel (Copilot Studio or Teams).
 
