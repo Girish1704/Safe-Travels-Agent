@@ -50,9 +50,9 @@ In this task, you will set up the Power Platform environment that will support y
 
 1. Navigate to **Microsoft Copilot Studio** by opening a new browser tab and going to `https://copilotstudio.microsoft.com`.
 
-   ![Navigate to Copilot Studio](../media/ex1-travel-g5.png)
-
-1. Sign in to Copilot Studio with your admin tenant credentials. You'll see the Copilot Studio welcome interface.
+   - In Copilot Studio, click the **environment name** in the top bar (for example, **CloudLabs Sandbox (dev...)**).
+   - In the panel, expand **Supported environments** by clicking the small **chevron**.
+   - Click **ODL_User 1944889's Environment** to switch.  
 
    ![Copilot Studio Welcome](../media/ex1-travel-g6.png)
 
