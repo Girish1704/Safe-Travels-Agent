@@ -52,7 +52,7 @@ In this task, you will set up the Power Platform environment that will support y
 
    - In Copilot Studio, click the **environment name** in the top bar (for example, **CloudLabs Sandbox (dev...)**).
    - In the panel, expand **Supported environments** by clicking the small **chevron**.
-   - Click **ODL_User 1944889's Environment** to switch.  
+   - Click **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>'s Environment** to switch.  
 
    ![Copilot Studio Welcome](../media/ex1-travel-g6.png)
 
