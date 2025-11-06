@@ -178,7 +178,6 @@ In this task, you will publish your Safe Travels agent and deploy it to Microsof
 
       ![](../media/ex1-travel-g24.png)
 
-
 1. Enter the **Temporary Access Pass (1)** and click **Sign in (2)**.
 
    - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
