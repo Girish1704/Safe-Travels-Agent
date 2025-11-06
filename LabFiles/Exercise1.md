@@ -199,6 +199,14 @@ In this task, you will publish your Safe Travels agent and deploy it to Microsof
 
    > **Channel Benefits:** Deploying to Microsoft Teams provides users access through their familiar collaboration environment, increasing adoption and usage.
 
+1. In the **Teams and Microsoft 365 Copilot** window, select the checkbox **Make agent available in Microsoft 365 Copilot (1)**, and then click **Add channel (2)**.
+
+   ![](../media/ex1-travel-g30.png)
+
+1. Once the channel is added successfully, click **See agent in Teams** to open and test the agent within Microsoft Teams.
+
+   ![](../media/cor2-gs-g2.png)
+
 1. If prompted to download the Teams desktop app, click **Use the web app instead** to continue using Teams in your browser.
 
    ![](../media/ex1-travel-g34.png)
@@ -215,13 +223,15 @@ In this task, you will publish your Safe Travels agent and deploy it to Microsof
 
    ![](../media/ex1-travel-g39.png)
 
-1. The Safe Travels Agent chat interface will open. Type your first message in the text box (1) and click the **Send** button (2) to test the agent.
+1. The **Safe Travels Agent** chat interface will open. Type your first message in the text box **(1)** and click the **Send** button **(2)**.
 
    ![](../media/ex1-travel-g40.png)
 
+1. To start interacting with the agent. Ask a few travel-related questions and review the agent’s responses.
+
 ## Summary
 
-In just 30 minutes, you've successfully:
+you've successfully:
 
 - Set up a Power Platform environment for agent development
 - Created a working Safe Travels agent using Microsoft's template

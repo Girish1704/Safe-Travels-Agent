@@ -278,13 +278,14 @@ In this task, you will create a specialized Leave Manager agent and configure mu
 
    ![](../media/ex2-travel-g68.png)
 
-1. Configure your Leave Manager agent with the following specifications:  
-   - **Name (1):** Leave Manager Agent  
-   - **Description (2):** Helps employees check leave balances and policies  
-   - **Instructions (3):** Track employee leaves and provide leave balance information  
-   - Click **Create (4)** to generate the specialized agent.
+1. Create the **Leave Manager Agent** as follows:  
+   - **Configure (1):** Click the **Configure** tab to set up your agent details.  
+   - **Name (2):** Enter **Leave Manager Agent**.  
+   - **Description (3):** Type `This agent is to track the leaves of all the employees, their leave balance and leave history to approve or reject any new leave requests.`  
+   - **Instructions (4):** Type `Track the leaves of employees. Track their leave balance. Apply/Reject leaves based on their balance.`  
+   - **Create (5):** Click **Create** to build the agent.  
 
-      ![](../media/ex2-travel-g69.png)
+      ![](../media/cor-g-g9.png)
 
       > **Agent Specialization:** Creating domain-specific agents allows for better accuracy, focused training, and more relevant responses for specific business functions.
 
@@ -320,9 +321,12 @@ In this task, you will create a specialized Leave Manager agent and configure mu
 
    ![](../media/ex2-travel-g76.png)
 
-1. Enter **Leave Balance Checker (1)** as the topic name, type **Get the Employee ID from the user and check and reply with the leave balance based on the tracker added as knowledge source (2)** as the description, and click **Create (3)** to generate the topic automatically.  
+1. Create the **Leave Balance Checker** topic as follows:  
+   - **Name your topic (1):** Enter **Leave Balance Checker**.  
+   - **Create a topic to... (2):** Type `Get the Employee ID from the user and check and reply with the leave balance based on the tracker added as knowledge source.`  
+   - **Create (3):** Click **Create** to generate the topic automatically.   
 
-   ![](../media/ex2-travel-g80.png)
+      ![](../media/ex2-travel-g80.png)
 
 1. Review the topic flow (1) to ensure all steps are correctly configured, then click **Save (2)** to store the changes.  
 
@@ -360,11 +364,11 @@ In this task, you will create a specialized Leave Manager agent and configure mu
 
    ![](../media/ex2-travel-g95.png)
 
-1. On the "Add an agent" page, you can add additional agents to work together in your workflow. Click **Add** to create a new agent that will collaborate with your existing Safe Travels Agent.
+1. Click **Add** to create a new agent that will collaborate with your existing Safe Travels Agent.
 
    ![](../media/ex2-travel-g96.png)
 
-1. To connect an existing agent click on **Copilot Studio**.
+1. Next to connect our existing agent click on **Copilot Studio**.
 
    ![](../media/ex2-travel-g97.png)
 
@@ -376,7 +380,7 @@ In this task, you will create a specialized Leave Manager agent and configure mu
 
    ![](../media/ex2-travel-g99.png)
 
-1. Verify that the **Leave Manager Agent** is now connected and enabled in the Agents tab.
+1. In the **Safe Travels Agent** interface, go to the **Agents** tab and click **Settings** to configure the agent settings.
 
    ![](../media/ex2-travel-g103.png)
 
@@ -384,7 +388,7 @@ In this task, you will create a specialized Leave Manager agent and configure mu
 
    ![](../media/ex2-travel-g104.png)
 
-1. Click on **New agent (1)** to create additional agents, then select the **Leave Manager Agent (2)**.
+1. Now on **Agent (1)** tab, select the **Leave Manager Agent (2)**.
 
    ![](../media/ex2-travel-g108.png)
 
