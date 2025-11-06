@@ -61,9 +61,13 @@ In this task, you will set up the Power Platform environment that will support y
 
    ![](../media/ex1-travel-g4.png)
 
-   > **Tip:** If the **Employee** table isn’t visible, verify you’ve switched to **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>'s Environment**.
+   > **Tip:** If the **Employee** table isn't visible, verify you've switched to **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>'s Environment**.
 
-1. Navigate to **Microsoft Copilot Studio** by opening a new browser tab and going to `https://copilotstudio.microsoft.com`.
+1. Navigate to **Microsoft Copilot Studio** by opening a new browser tab and using the link below:
+
+   ```
+   https://copilotstudio.microsoft.com
+   ```
 
 1. In Copilot Studio, open the environment picker **(1)**, expand **Supported environments (2)**, and select **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>'s Environment (3)** to switch.
 
@@ -162,7 +166,11 @@ In this task, you will publish your Safe Travels agent and deploy it to Microsof
 
    > **Publishing Process:** The agent will be packaged and made available for channel deployment. This process may take a few moments to complete.
 
-1. Open a new browser tab and navigate to [https://teams.microsoft.com/v2/](https://teams.microsoft.com/v2/). 
+1. Open a new browser tab and navigate to Microsoft Teams using the link below:
+
+   ```
+   https://teams.microsoft.com/v2/
+   ``` 
 
 1. If you see a "Get to know Teams" welcome screen, click **Get Started** to proceed.
 

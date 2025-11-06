@@ -74,7 +74,11 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
    ![](../media/gs-leave-5.png)
 
-1. Open a new browser tab and navigate to [https://make.powerapps.com/](https://make.powerapps.com/) (Power Apps portal).
+1. Open a new browser tab and navigate to the Power Apps portal using the link below:
+
+   ```
+   https://make.powerapps.com/
+   ```
 
    >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
 
