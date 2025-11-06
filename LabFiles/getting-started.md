@@ -4,57 +4,24 @@
 
 ## Overview
 
-In this focused hands-on lab, you will learn to build intelligent conversational agents using Microsoft Copilot Studio and explore multi-agent orchestration concepts. Starting with the Safe Travels agent template, you'll create and customize an AI agent that provides travel assistance to employees, then enhance it with basic business process automation and multi-agent capabilities.
+In this hands-on lab, you will build conversational agents using Microsoft Copilot Studio and explore multi-agent orchestration. You'll create a Safe Travels agent for travel assistance, add business process automation, and build a system where multiple agents work together.
 
-This practical lab is designed to be completed in exactly 60 minutes, focusing on the most essential skills: agent creation, Teams integration, and a taste of multi-agent orchestration. You'll get hands-on experience with Microsoft's latest AI technologies while building something genuinely useful for business scenarios. By the end, you'll have a working travel assistant agent deployed to Teams, plus understand how agents can work together to solve complex problems.
-
-## Objective
-
-Learn essential AI agent development using Microsoft Copilot Studio in just 1 hour. By the end of this lab, you will be able to:
-
-- **Create and Deploy AI Agents:** Build a working Safe Travels agent from template, customize it with knowledge sources, and successfully publish it to Microsoft Teams for real-world use.
-
-- **Integrate with Business Processes:** Create a basic Agent Flow that automates travel approval requests and posts them to Teams channels, demonstrating practical business automation.
-
-- **Understand Multi-Agent Concepts:** Experience how specialized agents can work together by adding a simple Leave Manager agent and seeing multi-agent orchestration in action.
-
-- **Deploy to Enterprise Platforms:** Successfully publish your agents to Microsoft Teams and Microsoft 365 Copilot, making them accessible to end users in familiar environments.
-
-## Pre-requisites
-
-- **Microsoft 365 Admin Tenant Credentials** with appropriate permissions for Copilot Studio and Teams administration
-- **Access to Microsoft Copilot Studio** environment with agent creation and publishing permissions
-- **Microsoft Teams** access for testing and deployment of published agents
-- **Basic understanding** of conversational AI concepts and Microsoft 365 collaboration tools
-- **Familiarity with business process automation** and enterprise workflow requirements
-
-## Architecture
-
-You'll complete a focused two-exercise journey that delivers maximum value in 60 minutes:
-
-1. **Safe Travels Agent Creation & Teams Deployment (30 mins):** Build and customize the Safe Travels agent from template, test its capabilities, and publish to Teams for immediate use by employees.
-
-2. **Agent Flows & Multi-Agent Basics (30 mins):** Create a simple travel approval flow, set up basic multi-agent orchestration with a Leave Manager agent, and see how agents can work together to handle complex requests.
+This lab focuses on essential skills: agent creation, Teams integration, and multi-agent orchestration. You'll build a working travel assistant agent and understand how agents can collaborate to solve business problems.
 
 ## Architecture Diagram
 
-## Explanation of Components
+## Key Components
 
-- **Microsoft Copilot Studio:** The primary development environment for creating, customizing, and managing AI agents, providing visual design tools, integration capabilities, and publishing options for enterprise-wide deployment.
-
-- **Safe Travels Agent:** A Business-to-Employee (B2E) conversational agent designed to provide comprehensive travel assistance, including destination information, travel policies, approval workflows, and integration with company-specific knowledge sources.
-
-- **Agent Flows & Power Platform Integration:** Sophisticated workflow automation capabilities that enable agents to perform complex business processes, integrate with external systems, send notifications to Teams channels, and maintain state across multi-step interactions.
-
-- **Leave Manager Agent:** A specialized agent focused on employee leave management, including leave balance tracking, policy information, and approval workflows, demonstrating how multiple agents can serve different business functions.
-
-- **Multi-Agent Orchestration:** Advanced AI scenario where multiple specialized agents collaborate automatically, delegate tasks based on user intent, and provide seamless user experiences across different business domains and use cases.
-
-- **Microsoft Teams & Microsoft 365 Integration:** Enterprise-grade deployment and integration capabilities that make custom agents accessible across the Microsoft 365 ecosystem, providing consistent user experiences and centralized management.
+- **Microsoft Copilot Studio:** Development environment for creating and managing AI agents
+- **Safe Travels Agent:** Travel assistance agent with policy integration and approval workflows
+- **Agent Flows:** Workflow automation that integrates with Teams channels
+- **Leave Manager Agent:** Specialized agent for employee leave management
+- **Multi-Agent Orchestration:** System enabling agents to collaborate and delegate tasks
+- **Microsoft Teams Integration:** Deploy agents across the Microsoft 365 ecosystem
 
 ## Getting Started with the Lab
 
-Welcome to your Leave Management System with Microsoft Copilot Studio lab! We've prepared a seamless environment for you to explore and learn how to build, configure, and test an intelligent leave management agent. This lab will guide you through applying business rules, handling approvals, and integrating with Dataverse to deliver a secure and efficient experience. Let's begin by making the most of this workshop!
+Welcome to your Safe Travels Agent lab! This lab will guide you through building and configuring conversational AI agents using Microsoft Copilot Studio. You'll create travel assistance agents, implement business workflows, and explore multi-agent orchestration.
 
 ### Accessing Your Lab Environment
 

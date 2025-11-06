@@ -12,10 +12,8 @@ This exercise demonstrates the power of conversational AI in real business scena
 
 You will be able to complete the following tasks:
 
-- Task 1: Set up Teams workspace and initialize agent flow trigger
-- Task 2: Configure flow actions and Teams message posting
-- Task 3: Integrate Travel Approval flow into agent and test end-to-end
-- Task 4: Build Leave Manager agent and establish multi-agent orchestration
+- Task 1: Create and configure travel approval flow with Teams integration
+- Task 2: Build Leave Manager agent and establish multi-agent orchestration
 
 ## Prerequisites
 
@@ -24,9 +22,9 @@ You will be able to complete the following tasks:
 - Understanding of basic workflow concepts and business process automation
 - **Safe Travels agent** available in your Copilot Studio environment
 
-## Task 1: Set Up Teams Workspace and Initialize Agent Flow Trigger
+## Task 1: Create and Configure Travel Approval Flow with Teams Integration
 
-In this task, you will build the foundation for the travel approval workflow: create the Teams workspace and initialize the agent flow trigger with required inputs. This sets the stage for later automation and integration.
+In this task, you will build a comprehensive travel approval workflow that integrates your Safe Travels agent with Microsoft Teams. This demonstrates how conversational AI can trigger real business processes, route requests to appropriate teams, and provide automated notifications. You'll create a complete end-to-end workflow that captures travel approval requests and posts them directly to designated Teams channels for manager review.
 
 1. Navigate to **Microsoft Teams** and go to the **Chat (1)** section, click the **New (2)** dropdown, and select **New team (3)** to create a dedicated workspace for travel approvals.
 
@@ -76,10 +74,6 @@ In this task, you will build the foundation for the travel approval workflow: cr
 1. Configure the second input parameter by naming it **Purpose** to capture the business reason for travel requests.
 
    ![Add Input](../media/ex2-travel-g10.png)
-
-## Task 2: Configure Flow Actions and Teams Message Posting
-
-In this task, you will add Microsoft Teams actions, dynamic content, response handling, and publish and name the Travel Approval flow.
 
 1. Click the **Add (1)** icon below the trigger node to insert a new action step in the workflow automation.
 
@@ -160,10 +154,6 @@ In this task, you will add Microsoft Teams actions, dynamic content, response ha
 
    ![Flow Published](../media/ex2-travel-g29.png)
 
-## Task 3: Integrate Travel Approval Flow into Agent and Test
-
-In this task, you will connect the published flow to a new topic in the Safe Travels agent, map variables, publish updates, and test end-to-end execution including Teams validation.
-
 1. In **Copilot Studio**, open the **Safe Travels Agent** and select **Topics (1)** from the dropdown menu.
 
    ![Overview Tab](../media/ex2-travel-g30.png)
@@ -179,35 +169,81 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
 
       ![](../media/cor-g-g12.png)
 
-1. Delete the existing message node as follows:  
-   - **More options (1):** Click the **ellipsis (…)** icon on the Message node.  
-   - **Delete (2):** Select **Delete** to remove the message from the topic flow.  
+1. To rename the topic click on **Untitled** topic.
 
-      ![](../media/cor-g-g16.png)
+   ![Flow Added](../media/ex2-travel-g37.png)
 
-1. In the topic authoring canvas, click the **plus (+)** icon below the **Question** node to add a new action.
+1. In the **Trigger** section, click **Edit (1)** under **User says a phrase** to define trigger phrases for the topic.
 
-   ![Confirm Publish](../media/cor-g-g17.png)
+   ![Add Topic](../media/ex2-travel-g38.png)
 
-1. Add the Travel Approval Flow tool as follows:  
-   - **Add a tool (1):** From the options menu, select **Add a tool**.  
-   - **Travel Approval Flow (2):** In the list of tools, choose **Travel Approval Flow** to link it with the topic.  
+1. In the **Trigger** section, click **Edit** under **User says a phrase** to define trigger phrases for the topic.
 
-      ![](../media/cor-g-g18.png)
+   ![Create Topic](../media/ex2-travel-g39.png)
 
-1. Perform the same step and select **PurposeOfTravel** for the **Purpose (String)** field.
+1. Enter a trigger phrase such as **I need travel approval (1)** and click the **plus (+) icon (2)** to add it to the list.
 
-1. Perform the same step for the **Purpose (String)** field and select **PurposeOfTravel** from the variable list.
+   ![Topic Created](../media/ex2-travel-g40.png)
 
-   ![](../media/cor-g-g19.png)
+1. Enter another phrase such as **Travel approval request (1)** and click the **Add (+) icon (2)** to include it as an additional trigger phrase.
 
-1. After mapping the outputs, click the **plus (+)** icon below the **Action** node to add the next step.
- 
-   ![](../media/cor-g-g20.png)
+   ![Topic Structure](../media/ex2-travel-g41.png)
 
-1. From the action menu, select **Send a message** to display a confirmation message to the user.
- 
-   ![](../media/cor-g-g21.png)
+1. Add another trigger phrase**Request travel approval** to help the agent recognize various user intents.
+
+   ![Check Flow](../media/ex2-travel-g42.png)
+
+1. Click the **plus (+) icon** below the **Trigger** to add a new node to the topic flow.
+
+   ![Add Node](../media/ex2-travel-g43.png)
+
+1. From the menu, select **Ask a question (1)** to prompt the user for additional input in the conversation flow.
+
+   ![Add Tool Flow](../media/ex2-travel-g44.png)
+
+1. In the question text box, type **What is your Employee ID? (1)** to ask the user for their ID and select the **arrow (2)** in the identify section.
+
+   ![Map Employee ID](../media/ex2-travel-g45.png)
+
+1. In the **Choose information to identify** panel, search for and select **Number** to identify the Employee ID as a numeric value.  
+
+   ![Map Purpose](../media/ex2-travel-g46.png)
+
+1. In the **Save user response as** field, click on the **variable name (1)** and rename it to **EmployeeID (2)**.  
+
+   ![Add Message Node](../media/ex2-travel-g47.png)
+
+1. Click on the **plus (+)** icon below the **Employee ID** question to add the next step in the flow.  
+
+   ![Configure Message](../media/ex2-travel-g48.png)
+
+1. From the menu options, select **Ask a question** to create a new user prompt.  
+
+   ![Save Topic](../media/ex2-travel-g49.png)
+
+1. Configure the question node as follows:  
+   - **Question (1):** What is the purpose of your travel?  
+   - **Identify (2):** User’s entire response  
+   - **Save user response as (3):** Purpose  
+   - **Variable name (4):** Purpose
+
+   ![Publish Agent](../media/ex2-travel-g50.png)
+
+1. Click on the **plus (+)** icon below the question node to add a new action.  
+
+   ![Confirm Publish](../media/ex2-travel-g51.png)
+
+1. From the action menu, select **Add a tool (1)** and choose **Travel Approval Flow (2)** from the list.  
+
+   ![Test Travel Approval](../media/ex2-travel-g52.png)
+
+1. In the **Employee ID (Number)** field, click on the variable picker **(1)** and select **EmployeeID (2)** from the list.  
+
+   ![Provide Details](../media/ex2-travel-g53.png)
+
+1. In the **Purpose (String)** field, click on the variable picker **(1)** and select **Purpose (2)** from the list.  
+
+   ![Allow Connection](../media/ex2-travel-g54.png)
 
 1. In the **Message** box, click on the **variable picker (1)** and select **Output (2)** from the list to insert it into the message.  
 
@@ -231,7 +267,7 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
 
 1. In the **Test your agent** panel, type **I need travel approval (1)** and click the **Send (2)** icon to initiate the travel approval request flow.  
 
-   ![](../media/cor-g-g23.png)
+   ![](../media/ex2-travel-g60.png)
 
 1. When prompted with **What is your Employee ID?**, enter **117 (1)** and click the **Send (2)** icon to submit your response.   
 
@@ -256,11 +292,11 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
    - **Message (4):** Confirm the post appears as  
      `Travel request from Employee ID: 117, Purpose: Client meeting`.  
 
-      ![](../media/ex2-travel-g65.png)
+   ![](../media/ex2-travel-g65.png)
 
-      > **Flow Validation:** Successfully testing the travel approval flow confirms that your agent can trigger real business processes and integrate with enterprise collaboration tools.
+   > **Flow Validation:** Successfully testing the travel approval flow confirms that your agent can trigger real business processes and integrate with enterprise collaboration tools.
 
-## Task 4: Build Leave Manager Agent and Establish Multi-Agent Orchestration
+## Task 2: Build Leave Manager Agent and Establish Multi-Agent Orchestration
 
 In this task, you will create a specialized Leave Manager agent and configure multi-agent orchestration to demonstrate how different AI agents can work together seamlessly. This showcases the power of distributed AI systems where specialized agents handle specific business domains while maintaining a unified user experience through intelligent routing and collaboration.
 
@@ -286,7 +322,7 @@ In this task, you will create a specialized Leave Manager agent and configure mu
 
       ![](../media/ex2-travel-g69.png)
 
-      > **Agent Specialization:** Creating domain-specific agents allows for better accuracy, focused training, and more relevant responses for specific business functions.
+   > **Agent Specialization:** Creating domain-specific agents allows for better accuracy, focused training, and more relevant responses for specific business functions.
 
 1. Navigate to the **Overview (1)** tab and click **Add knowledge (2)** to include organizational data sources that will enhance your agent's leave management capabilities.
 
@@ -295,10 +331,6 @@ In this task, you will create a specialized Leave Manager agent and configure mu
 1. Click **select to browse** to upload the leave management documentation that will serve as the knowledge foundation for your agent.
 
    ![](../media/ex2-travel-g71.png)
-
-1. In the file picker window, navigate to the folder **C:\datasets\Safe-Travels-Agent-Automate (1)**, select the files **Leave balance Tracker.xlsx** and **Leave Policy (2)**, and then click **Open (3)**.
-
-   ![](../media/cor-g-g5.png)
 
 1. Upload the required leave policy and tracking files, then click **Add to agent** to integrate them as authoritative knowledge sources.
 
@@ -428,7 +460,7 @@ In this task, you will create a specialized Leave Manager agent and configure mu
 
 ## Summary
 
-In this exercise, you successfully enhanced your conversational AI system with advanced business automation capabilities. You have accomplished:
+Excellent work! In this exercise, you successfully enhanced your conversational AI system with advanced business automation capabilities. You have accomplished:
 
 - **Created comprehensive travel approval workflows** that integrate with Microsoft Teams for real-time business process automation
 - **Built a specialized Leave Manager agent** with organizational knowledge sources and domain-specific expertise
