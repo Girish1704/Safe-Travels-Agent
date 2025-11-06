@@ -8,8 +8,6 @@ In this hands-on lab, you will build conversational agents using Microsoft Copil
 
 This lab focuses on essential skills: agent creation, Teams integration, and multi-agent orchestration. You'll build a working travel assistant agent and understand how agents can collaborate to solve business problems.
 
-## Architecture Diagram
-
 ## Key Components
 
 - **Microsoft Copilot Studio:** Development environment for creating and managing AI agents
@@ -93,5 +91,6 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 Now, click on the **Next** from lower right corner to move on next page.
 
    ![](../media/a-gs-g1.png)
+
 
 ## Happy Learning!!
