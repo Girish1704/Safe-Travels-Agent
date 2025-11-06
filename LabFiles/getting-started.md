@@ -59,7 +59,7 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
    - Email/Username: <inject key="AzureAdUserEmail"></inject>
 
-     ![](../media/gs-2.png)
+     ![](../media/ex1-travel-g24.png)
 
 1. Now, enter the following password and click on **Sign in**.
 
@@ -75,7 +75,7 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
 1. If the **Welcome to Power Apps** pop-up appears, leave the default country/region selection and click **Get started**.
 
-   ![](../media/cor-mn-e5-g-6.png)
+   ![](../media/gs-travel-g1.png)
 
 1. You have now successfully logged in to the Power Apps portal. Keep the portal open, as you will be using it later in the lab.
 
