@@ -73,6 +73,28 @@ In this task, you will set up the Power Platform environment that will support y
 
    ![](../media/ex1-travel-g6.png)
 
+1. If you are not able to see the environment under **Supported environments**, follow the below steps.
+
+   ![](../media/cor2-gs-g4.png)
+
+   1. Go back to the **Power Apps** portal, on your **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>’s Environment** copy the **Environment ID** from the browser URL as highlighted.
+
+      ![](../media/cor2-gs-g5.png)
+   
+   1. Open a **new browser tab**, and paste the copied **Environment ID** at the end of the following URL to verify access:
+
+      ```
+      https://copilotstudio.microsoft.com/environments/(Environment ID)
+      ```
+
+      ![](../media/cor2-gs-g6.png)
+
+      > **Note:** Replace **(Environment ID)** with the ID you copied in the previous step.
+   
+   1. You will be navigated to the **Copilot Studio** portal. Verify that **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>’s Environment** is visible and selected under **Supported environments**.
+
+      ![](../media/cor2-gs-g7.png)
+
 ## Task 2: Create Safe Travels Agent from Template
 
 In this task, you will create your first AI agent using the pre-built Safe Travels template, which provides a solid foundation with built-in travel assistance capabilities.
