@@ -262,7 +262,7 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
 
 ## Task 4: Establish Multi-Agent Orchestration
 
-In this task, you will create a specialized Leave Manager agent and configure multi-agent orchestration to demonstrate how different AI agents can work together seamlessly. This showcases the power of distributed AI systems where specialized agents handle specific business domains while maintaining a unified user experience through intelligent routing and collaboration.
+In this task, you will learn how the power of distributed AI systems where specialized agents handle specific business domains while maintaining a unified user experience through intelligent routing and collaboration.
 
 1. Test the current limitation by typing **Check my leave balance (1)** and click **Send (2)** in your Safe Travels agent.
 
