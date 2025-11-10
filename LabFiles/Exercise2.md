@@ -260,7 +260,7 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
 
       > **Flow Validation:** Successfully testing the travel approval flow confirms that your agent can trigger real business processes and integrate with enterprise collaboration tools.
 
-## Task 4: Build Leave Manager Agent and Establish Multi-Agent Orchestration
+## Task 4: Establish Multi-Agent Orchestration
 
 In this task, you will create a specialized Leave Manager agent and configure multi-agent orchestration to demonstrate how different AI agents can work together seamlessly. This showcases the power of distributed AI systems where specialized agents handle specific business domains while maintaining a unified user experience through intelligent routing and collaboration.
 
@@ -273,45 +273,6 @@ In this task, you will create a specialized Leave Manager agent and configure mu
    ![](../media/ex2-travel-g67.png)
 
    > **Agent Specialization:** This limitation demonstrates why multi-agent orchestration is valuable - different agents can specialize in specific business domains while working together seamlessly.
-
-1. Navigate to **Copilot Studio**, click **Agents (1)** and then select **+ New agent (2)** to create the specialized Leave Manager agent.
-
-   ![](../media/ex2-travel-g68.png)
-
-1. Create the **Leave Manager Agent** as follows:  
-   - **Configure (1):** Click the **Configure** tab to set up your agent details.  
-   - **Name (2):** Enter **Leave Manager Agent**.  
-   - **Description (3):** Type `This agent is to track the leaves of all the employees, their leave balance and leave history to approve or reject any new leave requests.`  
-   - **Instructions (4):** Type `Track the leaves of employees. Track their leave balance. Apply/Reject leaves based on their balance.`  
-   - **Create (5):** Click **Create** to build the agent.  
-
-      ![](../media/cor-g-g9.png)
-
-      > **Agent Specialization:** Creating domain-specific agents allows for better accuracy, focused training, and more relevant responses for specific business functions.
-
-1. Navigate to the **Overview (1)** tab and click **Add knowledge (2)** to include organizational data sources that will enhance your agent's leave management capabilities.
-
-   ![](../media/ex2-travel-g70.png)
-
-1. Click **select to browse** to upload the leave management documentation that will serve as the knowledge foundation for your agent.
-
-   ![](../media/ex2-travel-g71.png)
-
-1. In the file picker window, navigate to the folder **C:\datasets\Safe-Travels-Agent-Automate (1)**, select the files **Leave balance Tracker.xlsx** and **Leave Policy (2)**, and then click **Open (3)**.
-
-   ![](../media/cor-g-g5.png)
-
-1. Upload the required leave policy and tracking files, then click **Add to agent** to integrate them as authoritative knowledge sources.
-
-   ![](../media/ex2-travel-g72.png)
-
-1. Verify that all uploaded knowledge sources display **Ready** status, confirming successful integration and availability for agent responses.
-
-   ![](../media/ex2-travel-g73.png)
-
-   ![](../media/ex2-travel-g74.png)
-
-   > **Knowledge Integration:** Successfully uploaded knowledge sources enable your agent to provide accurate, policy-compliant responses based on your organization's actual leave management data.
 
 1. From the **menu**, select **Topics** to create or manage conversation topics for your agent.  
 

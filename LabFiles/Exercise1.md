@@ -95,9 +95,9 @@ In this task, you will set up the Power Platform environment that will support y
 
       ![](../media/cor2-gs-g7.png)
 
-## Task 2: Create Safe Travels Agent from Template
+## Task 2: Create Safe Travels & Leave Manager Agents
 
-In this task, you will create your first AI agent using the pre-built Safe Travels template, which provides a solid foundation with built-in travel assistance capabilities.
+In this task, you will create two AI agents the **Safe Travels Agent** to assist with travel-related queries and the **Leave Manager Agent** to manage employee leave information and approvals. This helps you understand how to quickly build and customize multiple agents for different business scenarios.
 
 1. In Copilot Studio, click **Create (1)** and select the **Safe Travels (2)** template card.
 
@@ -137,17 +137,60 @@ In this task, you will create your first AI agent using the pre-built Safe Trave
 
       ![](../media/ex1-travel-g11.png)
 
-1. The system will process your agent creation. Wait for the creation process to complete.
+1. The system will process your agent creation. **Provisioning may take 10–15 minutes, please proceed to the next step while it completes.
 
    ![](../media/ex1-travel-g12.png)
 
    ![](../media/ex1-travel-g13.png)
 
+1. Navigate to **Copilot Studio**, click **Agents (1)** and then select **+ New agent (2)** to create the specialized Leave Manager agent.
+
+   ![](../media/ex2-travel-g68.png)
+
+1. Create the **Leave Manager Agent** as follows:  
+   - **Configure (1):** Click the **Configure** tab to set up your agent details.  
+   - **Name (2):** Enter **Leave Manager Agent**.  
+   - **Description (3):** Type `This agent is to track the leaves of all the employees, their leave balance and leave history to approve or reject any new leave requests.`  
+   - **Instructions (4):** Type `Track the leaves of employees. Track their leave balance. Apply/Reject leaves based on their balance.`  
+   - **Create (5):** Click **Create** to build the agent.  
+
+      ![](../media/cor-g-g9.png)
+
+      > **Agent Specialization:** Creating domain-specific agents allows for better accuracy, focused training, and more relevant responses for specific business functions.
+
+1. Navigate to the **Overview (1)** tab and click **Add knowledge (2)** to include organizational data sources that will enhance your agent's leave management capabilities.
+
+   ![](../media/ex2-travel-g70.png)
+
+1. Click **select to browse** to upload the leave management documentation that will serve as the knowledge foundation for your agent.
+
+   ![](../media/ex2-travel-g71.png)
+
+1. In the file picker window, navigate to the folder **C:\datasets\Safe-Travels-Agent-Automate (1)**, select the files **Leave balance Tracker.xlsx (2)**, and then click **Open (3)**.
+
+   ![](../media/cor-g-g7.png)
+
+1. Upload the required leave policy and tracking files, then click **Add to agent** to integrate them as authoritative knowledge sources.
+
+   ![](../media/cor-g-g8.png)
+
+1. Verify that all uploaded knowledge sources display **Ready** status, confirming successful integration and availability for agent responses.
+
+   ![](../media/cor-g-g10.png)
+
+   ![](../media/cor-g-g24.png)
+
+   > **Knowledge Integration:** Successfully uploaded knowledge sources enable your agent to provide accurate, policy-compliant responses based on your organization's actual leave management data.
+
 ## Task 3: Test and Validate Agent Functionality
 
 In this task, you'll test your Safe Travels agent to validate its functionality and responses to travel-related queries.
 
-1. After confirming the knowledge sources show the status as **Ready**, click **Test** to open the test panel and verify your agent’s responses.
+1. From the left navigation menu, click **Agents (1)**, and then select **Safe Travels Agent (2)** from the list to open it.
+
+   ![](../media/ex2-travel-g111.png)
+
+1. Click **Test** to open the test panel and verify your agent’s responses.
 
    ![](../media/ex1-travel-g14.png)
 
