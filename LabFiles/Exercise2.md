@@ -40,21 +40,21 @@ In this task, you will build the foundation for the travel approval workflow: cr
 
 1. Navigate back to **Copilot Studio** and select **Flows (1)** from left menu. Click **New agent flow (2)** to create a new automated workflow.
 
-   ![Skip Members](../media/ex2-travel-g4.png)
+   ![Skip Members](../media/saf-tra-cor-v2-g16.png)
 
-1. Under **AI capabilities**, select **When an agent calls the flow** as the trigger mechanism to enable agent-initiated workflows.
+1. In the **Add a trigger** pane, search for **Skills (1)**, and then select **When an agent calls the flow (2)**.
 
-   ![Team Created](../media/ex2-travel-g5.png)
+   ![](../media/saf-tra-cor-v2-g17.png)
 
    > **Workflow Foundation:** This trigger allows your agent to initiate business processes automatically based on user conversations, creating seamless integration between conversational AI and business operations.
 
 1. Click **Add an input** under the trigger node to define the data parameters that your agent will pass to the workflow.
 
-   ![](../media/sfimg9.png)
+   ![](../media/saf-tra-cor-v2-g18.png)
 
 1. Choose **Number** as the data type for the first input parameter to capture employee identification.
 
-   ![New Agent Flow](../media/ex2-travel-g7.png)
+   ![New Agent Flow](../media/saf-tra-cor-v2-g19.png)
 
 1. Configure the first input parameter:
    - **Name:** Enter **Employee ID (1)**
@@ -76,7 +76,7 @@ In this task, you will add Microsoft Teams actions, dynamic content, response ha
 
 1. Click the **Add (1)** icon below the trigger node to insert a new action step in the workflow automation.
 
-   ![Employee ID Input](../media/ex2-travel-g11.png)
+   ![Employee ID Input](../media/saf-tra-cor-v2-g20.png)
 
 1. Search for Microsoft Teams integration by typing **Post message in a chat or channel (1)** and **select (2)** it from the available Microsoft Teams actions.
 
@@ -121,9 +121,9 @@ In this task, you will add Microsoft Teams actions, dynamic content, response ha
 
    ![Configure Teams](../media/ex2-travel-g19.png)
 
-1. In the search box, type **Respond to agent (1)** and select **Respond to the agent (2)** under the Skills section.
+1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**.
 
-   ![Message Configuration](../media/ex2-travel-g20.png)
+   ![Message Configuration](../media/saf-tra-cor-v2-g21.png)
 
 1. Click **Add an output (1)** under the **Respond to the agent** action to define the return message.
 
@@ -220,11 +220,9 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
 
 1. Navigate to the **Overview (1)** tab and click **Publish (2)** to make the agent updates live.  
 
-   ![Teams Notification](../media/ex2-travel-g57.png)
-
 1. In the **Publish this agent** dialog box, click **Publish** to confirm and deploy the agent.  
 
-   ![Teams Notification](../media/ex2-travel-g58.png)
+   ![Teams Notification](../media/saf-tra-cor-v2-g22.png)
 
 1. Once the agent is successfully published, click **Test** to verify and interact with your Copilot agent.  
 
