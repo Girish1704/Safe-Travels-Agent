@@ -12,9 +12,9 @@ This exercise demonstrates the power of conversational AI in real business scena
 
 You will complete the following tasks:
 
-- Task 1: Set up Teams workspace and initialize agent flow trigger
+- Task 1: Set up the Teams workspace and initialize the agent flow trigger
 - Task 2: Configure flow actions and Teams message posting
-- Task 3: Integrate Travel Approval flow into agent and test end-to-end
+- Task 3: Integrate Travel Approval flow into the agent and test end-to-end
 - Task 4: Build Leave Manager agent and establish multi-agent orchestration
 
 ## Task 1: Set Up Teams Workspace and Initialize Agent Flow Trigger
@@ -170,7 +170,7 @@ In this task, you will add Microsoft Teams actions, dynamic content, response ha
 
 ## Task 3: Integrate Travel Approval Flow into Agent and Test
 
-In this task, you will connect the published flow to a new topic in the Safe Travels agent, map variables, publish updates, and test end-to-end execution including Teams validation.
+In this task, you will connect the published flow to a new topic in the Safe Travels agent, map variables, publish updates, and test end-to-end execution, including Teams validation.
 
 1. In **Copilot Studio**, open the **Safe Travels Agent** and select **Topics (1)** from the dropdown menu.
 
@@ -286,7 +286,7 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
 
 ## Task 4: Establish Multi-Agent Orchestration
 
-In this task, you will learn how the power of distributed AI systems where specialized agents handle specific business domains while maintaining a unified user experience through intelligent routing and collaboration.
+In this task, you will learn how the power of distributed AI systems, where specialized agents handle specific business domains while maintaining a unified user experience through intelligent routing and collaboration.
 
 1. Navigate to **Leave manager agent** by selecting **Agents** from left menu.
 
@@ -321,15 +321,15 @@ In this task, you will learn how the power of distributed AI systems where speci
 
    ![](../media/sfimg19.png)
 
-1. In the Generative answers node, select **...** option.
+1. In the Generative answers node, select the **...** option.
 
    ![](../media/sfimg21.png)
 
-1. From the variable list select **EmployeeID**.
+1. From the variable list, select **EmployeeID**.
 
    ![](../media/sfimg20.png)
 
-1. Once done, click on **edit** to configure knowledge source.
+1. Once done, click on **edit** to configure the knowledge source.
 
    ![](../media/sfimg22.png)
 

@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this foundational exercise, you'll create your first AI agent using Microsoft Copilot Studio's Safe Travels template. This is a practical, hands-on introduction to conversational AI that will give you a working travel assistant agent deployed to Microsoft Teams by the end of 30 minutes.
+In this foundational exercise, you'll create your first AI agent using Microsoft Copilot Studio's Safe Travels template. This is a practical, hands-on introduction to conversational AI that will give you a working travel assistant agent deployed to Microsoft Teams.
 
 The Safe Travels agent will help employees with travel-related questions, policy information, and guidance. You'll see how easy it is to create powerful AI agents using templates, test them thoroughly, and deploy them to your organization's collaboration platform. This exercise focuses on getting you comfortable with the core agent development workflow that applies to any business scenario.
 
@@ -12,14 +12,14 @@ The Safe Travels agent will help employees with travel-related questions, policy
 
 You will complete the following tasks:
 
-- Task 1: Set up Power Platform environment and navigate to Copilot Studio
+- Task 1: Import data tables and navigate to Copilot Studio
 - Task 2: Create Safe Travels agent from template  
 - Task 3: Test and validate agent functionality
 - Task 4: Publish and deploy agent to Microsoft Teams
 
-## Task 1: Set Up Power Platform Environment
+## Task 1: Import Data Tables and Navigate to Copilot Studio
 
-In this task, you will set up the Power Platform environment that will support your Copilot Studio agents with the necessary data sources and knowledge files.
+In this task, you will import the required data tables into your Power Platform environment and navigate to Copilot Studio to begin building your agents.
 
 1. Navigate back to the Power Apps portal, and please switch to the environment that you created earlier.
 
@@ -84,11 +84,11 @@ In this task, you will set up the Power Platform environment that will support y
 
    ![](../media/ex1-travel-g6.png)
 
-   > If you are not able to see the environment under **Supported environments**, Please refresh or login once again by logging out.
+   > If you are not able to see the environment under **Supported environments**, please refresh or log in once again by logging out.
 
 ## Task 2: Create Safe Travels & Leave Manager Agents
 
-In this task, you will create two AI agents the **Safe Travels Agent** to assist with travel-related queries and the **Leave Manager Agent** to manage employee leave information and approvals. This helps you understand how to quickly build and customize multiple agents for different business scenarios.
+In this task, you will create two AI agents: the **Safe Travels Agent** to assist with travel-related queries and the **Leave Manager Agent** to manage employee leave information and approvals. This helps you understand how to quickly build and customize multiple agents for different business scenarios.
 
 1. In Copilot Studio, click **Agents (1)** and select the **Safe Travels (2)** template card.
 
@@ -302,7 +302,7 @@ In this task, you will publish your Safe Travels agent and deploy it to Microsof
 
    ![](../media/sfimg8.png)
 
-1. Once published, select **See agent in Teams** option to add the agent in Teams.
+1. Once published, select the **See agent in Teams** option to add the agent in Teams.
 
    ![](../media/cor2-gs-g2.png)
 
@@ -332,7 +332,7 @@ In this task, you will publish your Safe Travels agent and deploy it to Microsof
 
 You've successfully:
 
-- Set up a Power Platform environment for agent development
+- Imported data tables and navigated to Copilot Studio
 - Created a working Safe Travels agent using Microsoft's template
 - Tested the agent's travel assistance capabilities with real queries
 - Published and deployed the agent to Microsoft Teams for your organization
