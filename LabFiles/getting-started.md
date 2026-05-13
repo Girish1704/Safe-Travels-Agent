@@ -1,183 +1,173 @@
-# Build and Enhance a Safe Travels Agent with Multi-Agent Orchestration
+# マルチエージェントオーケストレーションを用いた Safe Travels Agent の構築と強化
 
-### Overall Estimated Duration: 1 Hour
+### 全体の推定所要時間：1時間
 
-## Overview
+## 概要
 
-In this hands-on lab, you will build and configure a Safe Travels Agent using Microsoft Copilot Studio to assist employees with travel planning, policy queries, and approval workflows. The agent leverages multi-agent orchestration to seamlessly delegate specialized tasks, such as leave balance inquiries, to a dedicated Leave Manager Agent. By integrating with Microsoft Teams and Power Automate, you will create an intelligent, automated system that enhances employee experience and streamlines business processes.
+このハンズオンラボでは、Microsoft Copilot Studio を使用して Safe Travels Agent を構築および構成し、従業員の出張計画、ポリシーに関する問い合わせ、承認ワークフローを支援します。このエージェントはマルチエージェントオーケストレーションを活用し、休暇残高の照会などの専門的なタスクを、専用の Leave Manager Agent にシームレスに委譲します。Microsoft Teams および Power Automate と統合することで、従業員体験を向上させ、業務プロセスを効率化するインテリジェントで自動化されたシステムを構築します。
 
-## Objectives
+## 目的
 
-By the end of this lab, you will:
+このラボを完了すると、以下が可能になります：
 
-- **Create and Deploy Safe Travels Agent:** Build a travel assistance agent using templates, integrate knowledge sources, and deploy to Microsoft Teams.
+- **Safe Travels Agent の作成とデプロイ：** テンプレートを使用して出張支援エージェントを構築し、ナレッジソースを統合し、Microsoft Teams にデプロイします。
 
-- **Implement Agent Flows for Business Automation:** Design and configure Power Automate flows that trigger travel approval processes and post notifications to Teams channels.
+- **業務自動化のためのエージェントフローの実装：** 出張承認プロセスをトリガーし、Teams チャネルに通知を投稿する Power Automate フローを設計および構成します。
 
-- **Build Multi-Agent Orchestration:** Create a specialized Leave Manager Agent and enable collaboration between multiple agents for comprehensive business solutions.
+- **マルチエージェントオーケストレーションの構築：** 専門的な Leave Manager Agent を作成し、複数のエージェント間で連携できるようにして、包括的なビジネスソリューションを実現します。
 
-- **Test End-to-End Workflows:** Validate agent responses, flow executions, and cross-agent handoffs to ensure reliable operation.
+- **エンドツーエンドのワークフローのテスト：** エージェントの応答、フローの実行、エージェント間のハンドオフを検証し、信頼性の高い動作を確保します。
 
-## Prerequisites
+## 前提条件
 
-- Basic Understanding of Conversational AI and Agentic AI Concepts
-- Working Knowledge of Microsoft Copilot Studio
-- Familiarity with Microsoft Teams and Power Platform
+- 会話型 AI およびエージェント型 AI の基本的な理解  
+- Microsoft Copilot Studio の実務知識  
+- Microsoft Teams および Power Platform の基本的な知識  
 
-## Explanation of Components
+## コンポーネントの説明
 
-- **Microsoft Copilot Studio:** Platform to build, configure, and manage conversational AI agents.
+- **Microsoft Copilot Studio：** 会話型 AI エージェントを構築、構成、管理するためのプラットフォーム  
 
-- **Dataverse:** Central data store for employee information, leave balances, and travel policies.
+- **Dataverse：** 従業員情報、休暇残高、出張ポリシーを格納する中央データストア  
 
-- **Power Platform Environment:** Secure workspace hosting agents, data tables, and workflows.
+- **Power Platform 環境：** エージェント、データテーブル、ワークフローをホストする安全なワークスペース  
 
-- **Power Automate:** Workflow automation engine for travel approval processes and Teams integration.
+- **Power Automate：** 出張承認プロセスおよび Teams 連携のためのワークフロー自動化エンジン  
 
-- **Microsoft Teams:** Collaboration hub where users interact with agents and receive approval notifications.
+- **Microsoft Teams：** ユーザーがエージェントとやり取りし、承認通知を受け取るコラボレーションハブ  
 
-- **Multi-Agent Orchestration:** Framework enabling specialized agents to work together and route requests intelligently.
+- **マルチエージェントオーケストレーション：** 専門的なエージェント同士が連携し、リクエストをインテリジェントに振り分けるフレームワーク  
 
-## Getting Started with the Lab
+## ラボの開始
 
-Welcome to your Build and Enhance a Safe Travels Agent with Multi-Agent Orchestration lab! We've prepared a seamless environment for you to explore and learn how to build, configure, and test intelligent travel assistance agents. This lab will guide you through creating AI agents, implementing business automation workflows, and establishing multi-agent orchestration to deliver a secure and efficient experience.
+「マルチエージェントオーケストレーションを用いた Safe Travels Agent の構築と強化」ラボへようこそ！このラボでは、インテリジェントな出張支援エージェントの構築、構成、およびテスト方法を体験できる環境が用意されています。AI エージェントの作成、業務自動化ワークフローの実装、マルチエージェントオーケストレーションの確立を通じて、安全で効率的な体験の提供方法を学びます。
 
-### Accessing Your Lab Environment
+### ラボ環境へのアクセス
 
-Once you're ready to dive in, your virtual machine and Lab guide will be right at your fingertips within your web browser.
+準備が整うと、仮想マシンおよびラボガイドは Web ブラウザー上ですぐに利用できます。
 
-![](../media/gs-travel-g5.png)
+![](../media/gs1.png)
 
-### Exploring Your Lab Resources
+### ラボリソースの確認
 
-To get a better understanding of your Lab resources and credentials, navigate to the Environment tab.
+ラボのリソースや資格情報を確認するには、Environment タブに移動してください。
 
-![](../media/gs-leave-2.png)
+![](../media/gs2.png)
 
-### Utilizing the Split Window Feature
+### 分割ウィンドウ機能の活用
 
-For convenience, you can open the Lab guide in a separate window by selecting the Split Window button from the top right corner
+利便性向上のため、右上の Split Window ボタンを選択すると、ラボガイドを別ウィンドウで開くことができます。
 
-![](../media/gs-leave-3.png)
+![](../media/gs3.png)
 
-### Managing Your Virtual Machine
+### 仮想マシンの管理
 
-From the **Resources (1)** tab, you can easily **start, stop, restart, or connect (2)** to your virtual machine—your experience is in your hands!
+**Resources (1)** タブから、仮想マシンの **起動、停止、再起動、接続 (2)** を簡単に行えます。すべての操作はあなたの手元で管理できます！
 
-![](../media/gs-leave-4.png)
+![](../media/gs7.png)
 
-## Let's Get Started with Power Apps Portal
 
-1. In the JumpVM, click on the **Microsoft Edge** browser shortcut on the desktop.
+## Power Apps ポータルを始めましょう
+
+1. JumpVM 上で、デスクトップにある **Microsoft Edge** ブラウザーのショートカットをクリックします。
 
    ![](../media/zgr-gt.png)
 
-1. Open a new browser tab and navigate to the Power Apps portal by entering the following URL:
+1. 新しいブラウザータブを開き、以下の URL を入力して Power Apps ポータルにアクセスします。
 
    ```
    https://make.powerapps.com/
    ```
 
-1. On the **Sign into Microsoft** tab, enter the following email **(1)** in the email field, and then click **Next (2)** to proceed.
+1. **Sign into Microsoft** タブで、メール欄に以下のメールアドレスを入力 **(1)** し、**Next (2)** をクリックして続行します。
 
    - Email: **<inject key="AzureAdUserEmail"></inject>**
 
-     ![](../media/gs-lab3-g2.png)
+     ![](../media/gs4.png)
 
-1. On the **Enter Temporary Access Pass** screen, enter the following **Temporary Access Pass**, and then click **Sign in (2)**.
-
+1. **Enter Temporary Access Pass** 画面で、以下の **一時アクセスパス (Temporary Access Pass)** を入力し、**Sign in (2)** をクリックします。
+   
    - Temporary Access Pass: **<inject key="AzureAdUserPassword"></inject>**
 
-     ![](../media/gs-lab3-g3.png)
+     ![](../media/gs5.png)
      
-1. If you see the pop-up **Stay Signed in?**, click **No**.
+1. **Stay Signed in?（サインイン状態を維持しますか？）** のポップアップが表示された場合は、**No** をクリックします。
 
-   ![](../media/gs-4.png)
+   ![](../media/gs6.png)
 
-1. If the **Welcome to Power Apps** pop-up appears, leave the default country/region selection and click **Get started**.
+1. **Welcome to Power Apps** のポップアップが表示された場合は、既定の国/地域の選択のままにして、**Get started** を選択します。
 
-   ![](../media/gs-travel-g1.png)
+   ![](../media/japan1.png)
 
-1. You have now successfully logged in to the Power Apps portal. Keep the portal open.
+1. これで Power Apps ポータルへのログインが正常に完了しました。このままポータルを開いた状態にしておきます。
 
-   ![](../media/gs-5.png)
+   ![](../media/japan2.png)
 
-   > **Note:** We are signing in to the Power Apps portal because it automatically assigns a Developer license, which is required to create and use a Developer environment in the next steps.
+   > **注:** Power Apps ポータルにサインインすることで、自動的に Developer ライセンスが割り当てられます。このライセンスは、次の手順で Developer 環境を作成および使用するために必要です。
 
-1. Open a new browser tab and navigate to the Power Platform admin center by entering the following URL:
+1. Power Apps ポータルで、左側メニューから **Tables (1)** を選択し、**Create a database (2)** を選択します。
+
+   > **注:** **Create Database** オプションが表示されず、すでにいくつかのテーブルが表示されている場合は、**ステップ 10** から続行してください。
+
+1. 新しいデータベースを作成するためのペインで、**Create my Database** を選択します。
+
+1. 完了したら、**Create with Excel or .CSV file** を選択します。
+
+   ![](../media/japan3.png)
+
+1. 環境を作成するポップアップウィンドウで、**Create** を選択します。これにより、新しい Power Platform の開発者環境が作成されます。
+
+1. 新しいブラウザータブを開き、以下の URL を入力して Power Platform 管理センターにアクセスします。
 
    ```
    https://admin.powerplatform.microsoft.com
    ```
 
-1. In the **Power Platform admin center**, select **Manage** from the left navigation pane.
+1. **Power Platform 管理センター** で、**Manage (1)** を選択し、次に **Environments (2)** を選択し、その後 **ODL_User &lt;inject key="DeploymentID" enableCopy="false"/&gt; の環境 (3)** を選択します。
 
-   ![](../media/nd-d2-cor-g-1.png)
+   ![](../media/japan20.png)
 
-1. In the Power Platform admin center, select **Environments (1)** from the left navigation pane, and then choose **New (2)** to create a new environment.
+   > 注: 環境が表示されない場合は、バックグラウンドでまだ作成中である可能性があります。これは Power Platform における正常な動作です。15～20分ほど待ってからページを更新してください。
 
-   ![](../media/d2-coor-gs-g2.png)
+1. 環境ページで、**S2S apps** の下にある **See all** を選択します。
 
-1. In the **New environment** pane, configure the environment with the following settings, and then select **Next (3)**:
+   ![](../media/japan7.png)
 
-   - Select **Developer (1)** from the **Type** dropdown.
-   - Enter **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment** in the **Name (2)** field.
+1. 次のペインで、**+ New app user** を選択します。
 
-      ![](../media/lev-mgmt-sb-gs-g1.png)
+   ![](../media/japan8.png)
 
-1. In the **Add Dataverse** pane, leave all settings as default, and then select **Save**.
+1. **Create a new app user** ペインで、**App** の下にある **+ Add an app** を選択します。
 
-   ![](../media/lev-mgmt-sb-gs-g2.png)
+   ![](../media/japan9.png)
 
-   > **Environment Foundation:** This step creates the foundational environment that will support your agents with company-specific data and knowledge sources.
-
-   > **Note:** Environment provisioning may take 10-15 minutes to complete. Wait until the status shows as ready before proceeding.
-
-   > **Note:** If you see an error stating that the environment list cannot be displayed, this is expected while the environment is being created in the background. After 10-15 minutes, refresh the browser and the environment should appear.
-
-1. In the **Power Platform admin center**, select **Manage (1)**, choose **Environments (2)**, and then click **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (3)**.
-
-   ![](../media/uppowadminimg1.png)
-
-1. In the environment page, click on **See all** under **S2S apps**.
-
-   ![](../media/pro-activ-gg-g3.png)
-
-1. In the next pane, click on **+ New app user**.
-
-   ![](../media/uppowadminimg3.png)
-
-1. In the create a new app user pane, under **App**, click on **+ Add an app**.
-
-   ![](../media/pro-activ-gg-g4.png)
-
-1. In the **Add an app from Microsoft Entra ID** pane, enter the URL provided below in the search box **(1)**, select the app from the results **(2)**, and then click **Add (3)**.
+1. **Add an app from Microsoft Entra ID** ペインで、検索ボックスに以下の URL を入力 **(1)** し、結果からアプリを選択 **(2)**、その後 **Add (3)** を選択します。
 
    ```
    https://cloudlabssandbox.onmicrosoft.com/cloudlabs.ai/
    ```
 
-   ![](../media/pro-activ-gg-g5.png)
+      ![](../media/japan10.png)
 
-1. Under **Business unit**, enter **org (1)** in the search box, and then select the available business unit from the list **(2)**.
+1. Business Unit の下で、テキスト入力フィールドをクリックして利用可能なオプションを表示し、一覧からいずれかのビジネスユニットを選択します。
 
-   ![](../media/pro-activ-gg-g6.png)
+   ![](../media/japan11.png)
 
-1. Beside **Security roles** click on **Edit** icon.
+1. **Security roles** の横にある **Edit** アイコンを選択します。
 
-   ![](../media/pro-activ-gg-g7.png)
+   ![](../media/japan12.png)
 
-1. In the **Sync Permissions** pane, select **System Administrator (1)**, and then click **Save (2)**.
+1. **Sync Permissions** ペインで、**System Administrator (1)** を選択し、その後 **Save (2)** を選択します。
 
-   ![](../media/pro-activ-gg-g8.png)
+   ![](../media/japan13.png)
 
-1. In the pop-up window, select **save**.
+1. ポップアップウィンドウで、**Save** を選択します。
 
-   ![](../media/pro-activ-gg-g9.png)
+   ![](../media/japan14.png)
 
-1. Review all the details and click on **Create**.
+1. すべての詳細を確認し、**Create** を選択します。
 
-   ![](../media/pro-activ-gg-g10.png)
+   ![](../media/japan15.png)
 
 ## Support Contact
 
