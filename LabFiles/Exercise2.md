@@ -1,104 +1,104 @@
-# Exercise 2: Agent Flows and Multi-Agent Orchestration
+# 演習 2: エージェント フローとマルチエージェント オーケストレーション
 
-### Estimated Duration: 30 Minutes
+### 推定所要時間: 30 分
 
-## Overview
+## 概要
 
-In this exercise, you'll enhance your Safe Travels agent with business process automation and experience multi-agent orchestration capabilities. You'll create a comprehensive travel approval workflow that integrates with Microsoft Teams and build a specialized Leave Manager agent that works seamlessly with your existing travel assistant.
+この演習では、Safe Travels エージェントをビジネス プロセスの自動化で強化し、マルチエージェント オーケストレーション機能を体験します。Microsoft Teams と統合した包括的な出張承認ワークフローを作成し、既存の出張支援エージェントとシームレスに連携する専門化された Leave Manager エージェントを構築します。
 
-This exercise demonstrates the power of conversational AI in real business scenarios. You'll see how agents can trigger actual business processes, collaborate with each other, and provide end-to-end automation solutions. By the end, you'll have a sophisticated multi-agent system where your Safe Travels agent can automatically route leave-related queries to a specialized Leave Manager agent while handling travel approvals through automated Teams notifications.
+この演習では、会話型 AI が実際のビジネス シナリオでいかに強力かを示します。エージェントが実際のビジネス プロセスをトリガーし、互いに連携し、エンドツーエンドの自動化ソリューションを提供する様子を確認できます。演習の終わりには、Safe Travels エージェントが休暇関連の照会を専門化された Leave Manager エージェントに自動的にルーティングしながら、自動化された Teams 通知を通じて出張承認を処理する高度なマルチエージェント システムが完成します。
 
-## Objectives
+## 目標
 
-You will complete the following tasks:
+以下のタスクを完了します。
 
-- Task 1: Set up the Teams workspace and initialize the agent flow trigger
-- Task 2: Configure flow actions and Teams message posting
-- Task 3: Integrate Travel Approval flow into the agent and test end-to-end
-- Task 4: Build Leave Manager agent and establish multi-agent orchestration
+- タスク 1: Teams ワークスペースの設定とエージェント フロー トリガーの初期化
+- タスク 2: フロー アクションの設定と Teams メッセージの投稿
+- タスク 3: 出張承認フローをエージェントに統合してエンドツーエンドでテスト
+- タスク 4: Leave Manager エージェントの構築とマルチエージェント オーケストレーションの確立
 
-## Task 1: Set Up Teams Workspace and Initialize Agent Flow Trigger
+## タスク 1: Teams ワークスペースの設定とエージェント フロー トリガーの初期化
 
-In this task, you will build the foundation for the travel approval workflow: create the Teams workspace and initialize the agent flow trigger with required inputs. This sets the stage for later automation and integration.
+このタスクでは、出張承認ワークフローの基盤を構築します。Teams ワークスペースを作成し、必要な入力でエージェント フロー トリガーを初期化します。これにより、後の自動化と統合のための準備が整います。
 
-1. Navigate to **Microsoft Teams** and go to the **Chat (1)** section, click the **New (2)** dropdown, and select **New team (3)** to create a dedicated workspace for travel approvals.
+1. **Microsoft Teams** に移動し、**[チャット (1)]** セクションに移動して、**[新規 (2)]** ドロップダウンをクリックし、**[新しいチーム (3)]** を選択して出張承認専用のワークスペースを作成します。
 
    ![Open Teams](../media/ex2-travel-g1.png)
 
-   >**Teams Integration Foundation:** Creating a dedicated team and channel structure ensures that travel approval requests are organized and routed to the appropriate stakeholders for review and processing.
+   >**Teams 統合の基盤:** 専用のチームとチャネル構造を作成することで、出張承認リクエストが整理され、レビューと処理のために適切な関係者にルーティングされます。
 
-1. Configure your new team with the following details, and then click **Create (3)**.
+1. 新しいチームに以下の詳細を設定し、**[作成 (3)]** をクリックします。
 
-   | Key | Value |
+   | 項目 | 値 |
    |-----|-------|
    | Team name **(1)** | `HR Team` |
    | First channel **(2)** | `Travel Approvals` |
 
    ![Create Team](../media/ex2-travel-g2.png)
 
-1. In the **Add members to HR Team** window, select **Skip** to continue without adding members for this demonstration.
+1. **[HR Team にメンバーを追加]** ウィンドウで、このデモではメンバーを追加せずに **[スキップ]** を選択して続行します。
 
    ![Team Details](../media/ex2-travel-g3.png)
 
-1. Navigate back to **Copilot Studio** and select **Flows (1)** from left menu. Click **New agent flow (2)** to create a new automated workflow.
+1. **Copilot Studio** に戻り、左メニューから **[フロー (1)]** を選択して、**[新しいエージェント フロー (2)]** をクリックして新しい自動化ワークフローを作成します。
 
    ![Skip Members](../media/saf-tra-cor-v2-g16.png)
 
-1. In the **Add a trigger** pane, search for **Skills (1)**, and then select **When an agent calls the flow (2)**.
+1. **[トリガーの追加]** ウィンドウで、**[スキル (1)]** を検索し、**[エージェントがフローを呼び出したとき (2)]** を選択します。
 
    ![](../media/saf-tra-cor-v2-g17.png)
 
-   > **Workflow Foundation:** This trigger allows your agent to initiate business processes automatically based on user conversations, creating seamless integration between conversational AI and business operations.
+   > **ワークフローの基盤:** このトリガーにより、エージェントがユーザーとの会話に基づいてビジネス プロセスを自動的に開始できるようになり、会話型 AI とビジネス オペレーションのシームレスな統合が実現します。
 
-1. Click **Add an input** under the trigger node to define the data parameters that your agent will pass to the workflow.
+1. トリガー ノードの下の **[入力の追加]** をクリックして、エージェントがワークフローに渡すデータ パラメーターを定義します。
 
    ![](../media/saf-tra-cor-v2-g18.png)
 
-1. Choose **Number** as the data type for the first input parameter to capture employee identification.
+1. 最初の入力パラメーターのデータ型として **[数値]** を選択して、従業員 ID を取得します。
 
    ![New Agent Flow](../media/saf-tra-cor-v2-g19.png)
 
-1. Configure the first input parameter:
-   - **Name:** Enter **Employee ID (1)**
-   - Click **Add an input (2)** to create the second parameter.
+1. 最初の入力パラメーターを設定します。
+   - **名前:** **Employee ID (1)** を入力します。
+   - **[入力の追加 (2)]** をクリックして 2 番目のパラメーターを作成します。
 
       ![Add Trigger](../media/ex2-travel-g8.png)
 
-1. Select **Text** as the data type for the second input parameter to capture travel details.
+1. 2 番目の入力パラメーターのデータ型として **[テキスト]** を選択して、出張の詳細を取得します。
 
    ![Select Trigger](../media/ex2-travel-g9.png)
 
-1. Configure the second input parameter by naming it **Purpose** to capture the business reason for travel requests.
+1. 2 番目の入力パラメーターに **Purpose** という名前を付けて、出張リクエストのビジネス上の理由を取得します。
 
    ![Add Input](../media/ex2-travel-g10.png)
 
-## Task 2: Configure Flow Actions and Teams Message Posting
+## タスク 2: フロー アクションの設定と Teams メッセージの投稿
 
-In this task, you will add Microsoft Teams actions, dynamic content, response handling, and publish and name the Travel Approval flow.
+このタスクでは、Microsoft Teams アクション、動的コンテンツ、応答処理を追加し、出張承認フローを公開して名前を付けます。
 
-1. Click the **Add (1)** icon below the trigger node to insert a new action step in the workflow automation.
+1. トリガー ノードの下の **[追加 (1)]** アイコンをクリックして、ワークフロー自動化に新しいアクション ステップを挿入します。
 
    ![Employee ID Input](../media/saf-tra-cor-v2-g20.png)
 
-1. Search for Microsoft Teams integration by typing **Post message in a chat or channel (1)** and **select (2)** it from the available Microsoft Teams actions.
+1. テキスト ボックスに **[チャットまたはチャネルにメッセージを投稿 (1)]** と入力して Microsoft Teams 統合を検索し、利用可能な Microsoft Teams アクションから選択します **(2)**。
 
    ![Add Second Input](../media/ex2-travel-g12.png)
 
-1. Establish the Microsoft Teams connection by selecting **Sign in** to authenticate and authorize the workflow integration.
+1. **[サインイン]** を選択して認証を行い、ワークフロー統合のために Microsoft Teams 接続を確立します。
 
    ![Purpose Input](../media/ex2-travel-g13.png)
 
-1. Choose your **ODL_User (1)** account credentials to authenticate and establish the Microsoft Teams connection.
+1. **ODL_User (1)** アカウントの資格情報を選択して認証し、Microsoft Teams 接続を確立します。
 
    ![Add Action](../media/ex2-travel-g14.png)
 
-1. In the next pane, please click on **Allow Access** to allow connection access to your agent.
+1. 次のウィンドウで、**[アクセスを許可]** をクリックして、エージェントへの接続アクセスを許可します。
 
    ![](../media/sfimg10.png)
 
-1. Configure the Teams message posting action with the following parameters.
+1. 以下のパラメーターで Teams メッセージ投稿アクションを設定します。
 
-   | Key | Value |
+   | 項目 | 値 |
    |-----|-------|
    | Post as **(1)** | Flow bot |
    | Post in **(2)** | Channel |
@@ -108,39 +108,39 @@ In this task, you will add Microsoft Teams actions, dynamic content, response ha
 
    ![Search Teams](../media/ex2-travel-g15.png)
 
-   > **Teams Integration Benefits:** This configuration ensures that travel approval requests are automatically posted to the designated HR team channel, creating a centralized approval workflow with proper audit trails.
+   > **Teams 統合のメリット:** この設定により、出張承認リクエストが指定された HR チーム チャネルに自動的に投稿され、適切な監査証跡を持つ集中型の承認ワークフローが作成されます。
 
-1. Highlight **[Employee ID] (1)** in the message box and click the **Dynamic content (2)** icon to insert the Employee ID variable.
+1. メッセージ ボックスの **[Employee ID] (1)** をハイライトし、**[動的コンテンツ (2)]** アイコンをクリックして Employee ID 変数を挿入します。
 
    ![Post Message Action](../media/ex2-travel-g16.png)
 
-1. From the **Dynamic content** panel, select **Employee ID** under the “When an agent calls the flow” section.
+1. **[動的コンテンツ]** パネルで、「エージェントがフローを呼び出したとき」セクションの下にある **[Employee ID]** を選択します。
 
    ![Sign In](../media/ex2-travel-g17.png)
 
-1. Highlight **[Purpose] (1)** in the message and click the **Dynamic content (2)** icon to insert the Purpose variable.
+1. メッセージの **[Purpose] (1)** をハイライトし、**[動的コンテンツ (2)]** アイコンをクリックして Purpose 変数を挿入します。
 
    ![Login Credentials](../media/ex2-travel-g18.png)
 
-1. Verify that both dynamic values **Employee ID** and **Purpose (1)** are added correctly, then click the **Add (2)** icon to insert the next action.
+1. **Employee ID** と **Purpose (1)** の両方の動的な値が正しく追加されていることを確認したら、**[追加 (2)]** アイコンをクリックして次のアクションを挿入します。
 
    ![Configure Teams](../media/ex2-travel-g19.png)
 
-1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**.
+1. **[アクションの追加]** ウィンドウで、**[スキル (1)]** を検索し、**[エージェントへの応答 (2)]** を選択します。
 
    ![Message Configuration](../media/saf-tra-cor-v2-g21.png)
 
-1. Click **Add an output (1)** under the **Respond to the agent** action to define the return message.
+1. **[エージェントへの応答]** アクションの下の **[出力の追加 (1)]** をクリックして、返答メッセージを定義します。
 
    ![Dynamic Content](../media/ex2-travel-g21.png)
 
-1. Select **Text (1)** as the type of output for the agent response.
+1. エージェントへの応答の出力タイプとして **[テキスト (1)]** を選択します。
 
    ![Parameters Complete](../media/ex2-travel-g22.png)
 
-1. Enter the following details for the output configuration.
+1. 出力設定に以下の詳細を入力します。
 
-   | Key | Value |
+   | 項目 | 値 |
    |-----|-------|
    | Name **(1)** | `Output` |
    | Value **(2)** | `Request submitted` |
@@ -148,107 +148,107 @@ In this task, you will add Microsoft Teams actions, dynamic content, response ha
 
    ![Close Parameters](../media/ex2-travel-g23.png)
 
-1. Click **Save draft (1)** to save the current flow configuration before publishing.
+1. **[下書きの保存 (1)]** をクリックして、現在のフロー設定を公開前に保存します。
 
    ![Add Second Action](../media/ex2-travel-g24.png)
 
-1. Verify the confirmation message **“We saved your draft flow. You can test and run it after you publish.”** appears at the top of the page.
+1. ページの上部に **「下書きフローを保存しました。公開後にテストして実行できます。」** という確認メッセージが表示されることを確認します。
 
    ![Respond to Agent](../media/ex2-travel-g25.png)
 
-1. Click **Publish** to make the agent flow available for use.
+1. **[公開]** をクリックして、エージェント フローを使用可能にします。
 
    ![Configure Output](../media/ex2-travel-g26.png)
 
-1. Go to the **Overview (1)** tab and click **Edit (2)** to modify the agent flow details.
+1. **[概要 (1)]** タブに移動し、**[編集 (2)]** をクリックしてエージェント フローの詳細を変更します。
 
    ![Publish Flow](../media/ex2-travel-g28.png)
 
-1. Enter **Travel Approval Flow (1)** as the Flow name and click **Save (2)** to apply the changes.
+1. フロー名として **Travel Approval Flow (1)** を入力し、**[保存 (2)]** をクリックして変更を適用します。
 
    ![Flow Published](../media/ex2-travel-g29.png)
 
 <validation step="79aacbd4-3125-426d-8b4f-fc9a29efaa87" />
  
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **タスクの完了、おめでとうございます!** 次は検証を行いましょう。以下の手順に従ってください。
+> - 該当するタスクの [検証] ボタンをクリックしてください。成功メッセージが表示されたら、次のタスクに進むことができます。
+> - 表示されない場合は、エラー メッセージをよく読んで手順を再確認し、ラボ ガイドの指示に従って再試行してください。
+> - サポートが必要な場合は、cloudlabs-support@spektrasystems.com までお問い合わせください。24 時間 365 日対応しています。
 
-## Task 3: Integrate Travel Approval Flow into Agent and Test
+## タスク 3: 出張承認フローのエージェントへの統合とテスト
 
-In this task, you will connect the published flow to a new topic in the Safe Travels agent, map variables, publish updates, and test end-to-end execution, including Teams validation.
+このタスクでは、公開されたフローを Safe Travels エージェントの新しいトピックに接続し、変数をマッピングして更新を公開し、Teams での検証を含むエンドツーエンドの実行をテストします。
 
-1. In **Copilot Studio**, open the **Safe Travels Agent** and select **Topics (1)** from the dropdown menu.
+1. **Copilot Studio** で **Safe Travels Agent** を開き、ドロップダウン メニューから **[トピック (1)]** を選択します。
 
    ![Overview Tab](../media/ex2-travel-g30.png)
 
-1. On the **Topics** tab, click **Add a topic (1)** and then select **Add from description with Copilot (2)** from the dropdown menu.
+1. **[トピック]** タブで、**[トピックの追加 (1)]** をクリックし、ドロップダウン メニューから **[Copilot を使用して説明から追加 (2)]** を選択します。
 
    ![Add to Agent](../media/ex2-travel-g31.png)
 
-1. Create the Travel Approval topic with the following details, and then click **Create (3)**.
+1. 以下の詳細で出張承認トピックを作成し、**[作成 (3)]** をクリックします。
 
-   | Key | Value |
+   | 項目 | 値 |
    |-----|-------|
    | Name your topic **(1)** | `Travel Approval` |
    | Create a topic to... **(2)** | `This topic should get the Employee ID (Number) and Purpose of travel (Text) details from the user and invoke the Tool "Request Travel Approval Flow"` |
 
    ![](../media/cor-g-g12.png)
 
-1. Delete the existing message node as follows:  
-   - **More options (1):** Click the **ellipsis (…)** icon on the Message node.  
-   - **Delete (2):** Select **Delete** to remove the message from the topic flow.  
+1. 既存のメッセージ ノードを次の手順で削除します。
+   - **その他のオプション (1):** メッセージ ノードの**省略記号 (...)** アイコンをクリックします。
+   - **削除 (2):** **[削除]** を選択してトピック フローからメッセージを削除します。
 
       ![](../media/cor-g-g16.png)
 
-1. In the topic authoring canvas, click the **plus (+)** icon below the **Question** node to add a new action.
+1. トピック作成キャンバスで、**[質問]** ノードの下の **プラス (+)** アイコンをクリックして新しいアクションを追加します。
 
    ![Confirm Publish](../media/cor-g-g17.png)
 
-1. Add the Travel Approval Flow tool as follows:  
-   - **Add a tool (1):** From the options menu, select **Add a tool**.  
-   - **Travel Approval Flow (2):** In the list of tools, choose **Travel Approval Flow** to link it with the topic.  
+1. 出張承認フロー ツールを以下の手順で追加します。
+   - **[ツールの追加 (1)]:** オプション メニューから **[ツールの追加]** を選択します。
+   - **[Travel Approval Flow (2)]:** ツールの一覧から **[Travel Approval Flow]** を選択してトピックにリンクします。
 
       ![](../media/cor-g-g18.png)
 
-1. In the **Power Automate inputs (2)** section, click the variable picker **(1)** next to **Employee ID (Number)**, and from the **Select a variable** panel, choose **EmployeeID (2)**.
+1. **[Power Automate の入力 (2)]** セクションで、**Employee ID (Number)** の横にある変数ピッカー **(1)** をクリックし、**[変数の選択]** パネルから **EmployeeID (2)** を選択します。
 
       ![](../media/cor2-gs-g8.png)
 
-1. Perform the same step and select **PurposeOfTravel** for the **Purpose (String)** field.
+1. 同じ手順を行い、**Purpose (String)** フィールドに **PurposeOfTravel** を選択します。
 
-1. Once both variables are mapped correctly, the configuration should appear as shown in the image — **Employee ID (Number)** mapped to **EmployeeID** and **Purpose (String)** mapped to **PurposeOfTravel**.
+1. 両方の変数が正しくマッピングされると、**Employee ID (Number)** が **EmployeeID** に、**Purpose (String)** が **PurposeOfTravel** にマッピングされた状態で表示されます。
 
    ![](../media/cor-g-g19.png)
 
-1. After mapping the outputs, click the **plus (+)** icon below the **Action** node to add the next step.
+1. 出力のマッピング後、**[アクション]** ノードの下の **プラス (+)** アイコンをクリックして次の手順を追加します。
  
    ![](../media/cor-g-g20.png)
 
-1. From the action menu, select **Send a message** to display a confirmation message to the user.
+1. アクション メニューから **[メッセージの送信]** を選択して、ユーザーへの確認メッセージを表示します。
  
    ![](../media/cor-g-g21.png)
 
-1. In the **Message** box, click on the **variable picker (1)** and select **Output (2)** from the list to insert it into the message.  
+1. **[メッセージ]** ボックスで、**変数ピッカー (1)** をクリックし、一覧から **[Output (2)]** を選択してメッセージに挿入します。
 
    ![Request Submitted](../media/ex2-travel-g55.png)
 
-1. Click on the **Save** button to save the topic configuration.  
+1. **[保存]** ボタンをクリックしてトピックの設定を保存します。
 
    ![Teams Notification](../media/ex2-travel-g56.png)
 
-1. Navigate to the **Overview (1)** tab and click **Publish (2)** to make the agent updates live.  
+1. **[概要 (1)]** タブに移動し、**[公開 (2)]** をクリックしてエージェントの更新を反映させます。
 
-1. In the **Publish this agent** dialog box, click **Publish** to confirm and deploy the agent.  
+1. **[このエージェントを公開]** ダイアログ ボックスで、**[公開]** をクリックして確定し、エージェントを展開します。
 
    ![Teams Notification](../media/saf-tra-cor-v2-g22.png)
 
-1. Once the agent is successfully published, click **Test** to verify and interact with your Copilot agent.  
+1. エージェントが正常に公開されたら、**[テスト]** をクリックして Copilot エージェントを確認および操作します。
 
    ![Teams Notification](../media/ex2-travel-g59.png)
 
-1. In the test chat, enter the following **prompt (1)** and then select **Send (2)**.
+1. テスト チャットで次の**プロンプト (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
    I need travel approval
@@ -256,7 +256,7 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
 
    ![](../media/cor-g-g23.png)
 
-1. When prompted with **What is your Employee ID?**, enter the following **response (1)** and then select **Send (2)**.
+1. **「従業員 ID は何ですか?」** と質問されたら、次の**応答 (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
    117
@@ -264,7 +264,7 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
 
    ![](../media/ex2-travel-g61.png)
 
-1. When asked **What is the purpose of your travel?**, enter the following **response (1)** and then select **Send (2)**.
+1. **「出張の目的は何ですか?」** と聞かれたら、次の**応答 (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
    Client meeting
@@ -272,87 +272,86 @@ In this task, you will connect the published flow to a new topic in the Safe Tra
 
    ![](../media/ex2-travel-g62.png)
 
-1. When prompted for Microsoft Teams connection access, click **Allow** to authorize the integration and enable the flow to post travel requests in Teams.
+1. Microsoft Teams の接続アクセスを求めるプロンプトが表示されたら、**[許可]** をクリックして統合を承認し、フローが Teams に出張リクエストを投稿できるようにします。
 
    ![](../media/ex2-travel-g63.png)
 
-1. Once the Microsoft Teams connection is authorized, verify that the confirmation message **Request submitted** is displayed — indicating the travel approval request was successfully processed.
+1. Microsoft Teams 接続が承認されたら、確認メッセージ **Request submitted** が表示されることを確認します。これは出張承認リクエストが正常に処理されたことを示します。
 
    ![](../media/ex2-travel-g64.png)
 
-1. Verify the message is posted in Microsoft Teams as follows:  
-   - **Chat (1):** Open the **Chat** tab.  
-   - **Team (2):** Select **HR Team**.  
-   - **Channel (3):** Open **Travel Approvals**.  
-   - **Message (4):** Confirm the post appears as  
-     `Travel request from Employee ID: 117, Purpose: Client meeting`.  
+1. Microsoft Teams でメッセージが投稿されていることを以下の手順で確認します。
+   - **[チャット (1)]:** **[チャット]** タブを開きます。
+   - **[チーム (2)]:** **[HR Team]** を選択します。
+   - **[チャネル (3)]:** **[Travel Approvals]** を開きます。
+   - **[メッセージ (4)]:** 投稿が `Travel request from Employee ID: 117, Purpose: Client meeting` として表示されていることを確認します。
 
       ![](../media/ex2-travel-g65.png)
 
-      > **Flow Validation:** Successfully testing the travel approval flow confirms that your agent can trigger real business processes and integrate with enterprise collaboration tools.
+      > **フローの検証:** 出張承認フローのテストが成功すると、エージェントが実際のビジネス プロセスをトリガーし、エンタープライズ コラボレーション ツールと統合できることが確認されます。
 
-## Task 4: Establish Multi-Agent Orchestration
+## タスク 4: マルチエージェント オーケストレーションの確立
 
-In this task, you will learn how the power of distributed AI systems, where specialized agents handle specific business domains while maintaining a unified user experience through intelligent routing and collaboration.
+このタスクでは、分散 AI システムの強みを学びます。専門化されたエージェントが特定のビジネス ドメインを担当しながら、インテリジェントなルーティングと連携を通じて統一されたユーザー エクスペリエンスを維持します。
 
-1. Navigate to **Leave manager agent** by selecting **Agents** from left menu.
+1. 左メニューから **[エージェント]** を選択して、**Leave Manager エージェント**に移動します。
 
    ![](../media/sfimg11.png)
 
-1. From the top **menu**, select **Topics** to create or manage conversation topics for your agent.  
+1. 上部の**メニュー**から **[トピック]** を選択して、エージェントの会話トピックを作成または管理します。
 
    ![](../media/ex2-travel-g75.png)
 
-1. Click **Add a topic (1)** and choose **Add from description with Copilot (2)** to generate a topic automatically from a natural language description.  
+1. **[トピックの追加 (1)]** をクリックし、**[Copilot を使用して説明から追加 (2)]** を選択して、自然言語の説明からトピックを自動生成します。
 
    ![](../media/ex2-travel-g76.png)
 
-1. Create the **Leave Balance Checker** topic with the following details, and then click **Create (3)**.
+1. 以下の詳細で **Leave Balance Checker** トピックを作成し、**[作成 (3)]** をクリックします。
 
-   | Key | Value |
+   | 項目 | 値 |
    |-----|-------|
    | Name your topic **(1)** | `Leave Balance Checker` |
    | Create a topic to... **(2)** | `Get the Employee ID from the user and check and reply with the leave balance based on the tracker added as knowledge source.` |
 
    ![](../media/ex2-travel-g80.png)
 
-1. Review the topic flow and select the **message** node's menu by clicking on **...** and select **Delete**.
+1. トピック フローを確認し、**メッセージ** ノードのメニューで **[...]** をクリックして **[削除]** を選択します。
 
    ![](../media/sfimg17.png)
 
-1. Once done, click on **+** to add a new node.
+1. 完了したら、**[+]** をクリックして新しいノードを追加します。
 
    ![](../media/sfimg18.png)
 
-1. From the list, select **Advanced** and click on **Generative answers**.
+1. 一覧から **[詳細設定]** を選択し、**[生成型の回答]** をクリックします。
 
    ![](../media/sfimg19.png)
 
-1. In the Generative answers node, select the **...** option.
+1. 生成型の回答ノードで **[...]** オプションを選択します。
 
    ![](../media/sfimg21.png)
 
-1. From the variable list, select **EmployeeID**.
+1. 変数一覧から **EmployeeID** を選択します。
 
    ![](../media/sfimg20.png)
 
-1. Once done, click on **edit** to configure the knowledge source.
+1. 完了したら、**[編集]** をクリックしてナレッジ ソースを設定します。
 
    ![](../media/sfimg22.png)
 
-1. In the side panel, toggle the **Search only selected sources** option and from the list select **Leave balance Tracker.xlsx**.
+1. サイド パネルで **[選択したソースのみを検索]** オプションをオンにし、一覧から **Leave balance Tracker.xlsx** を選択します。
 
    ![](../media/sfimg23.png)
 
-1. Once configured, click on **Save** from the top menu to save the topic.
+1. 設定が完了したら、上部メニューから **[保存]** をクリックしてトピックを保存します。
 
    ![](../media/sfimg24.png)
 
-1. After saving the topic successfully, click **Test** to open the testing pane and verify your Leave Manager Agent’s response flow.  
+1. トピックを正常に保存したら、**[テスト]** をクリックしてテスト ウィンドウを開き、Leave Manager エージェントの応答フローを確認します。
 
    ![](../media/ex2-travel-g90.png)
 
-1. In the test chat, enter the following **prompt (1)** and then select **Send (2)**.
+1. テスト チャットで次の**プロンプト (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
    Check Leave balance
@@ -360,7 +359,7 @@ In this task, you will learn how the power of distributed AI systems, where spec
 
    ![](../media/ex2-travel-g84.png)
 
-1. When prompted, enter the following **Employee ID (1)** and then select **Send (2)**.
+1. 入力を求められたら、次の**従業員 ID (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
    1234
@@ -368,71 +367,71 @@ In this task, you will learn how the power of distributed AI systems, where spec
 
    ![](../media/ex2-travel-g85.png)
 
-1. See how the Leave Manager agent displays that Employee ID 1234 (John Doe) has **2 days** leave balance remaining, demonstrating multi-agent orchestration in action where specialized agents work together seamlessly **(1)**.
+1. Leave Manager エージェントが、従業員 ID 1234 (John Doe) の休暇残高が **2 日**であることを表示することを確認します **(1)**。これは、専門化されたエージェントがシームレスに連携するマルチエージェント オーケストレーションの実際の動作を示しています。
 
    ![](../media/sfimg13.png)
 
-1. Click **Publish (1)** to publish the agent.
+1. **[公開 (1)]** をクリックしてエージェントを公開します。
 
-1. Click again on **Publish** in the dialog box.
+1. ダイアログ ボックスで再度 **[公開]** をクリックします。
 
    ![](../media/sfimg8.png)
 
-1. Once published, navigate back to **Safe Travels Agent**.
+1. 公開が完了したら、**Safe Travels Agent** に戻ります。
 
    ![](../media/saf-tra-cor-v2-g14.png)
 
-1. Click on the **+5 (1)** menu to access additional options. Select **Agents (2)** to manage your agents or access other features like Topics, Activity, Analytics, and Channels.
+1. **[+5 (1)]** メニューをクリックして追加オプションにアクセスします。**[エージェント (2)]** を選択して、エージェントの管理またはトピック、アクティビティ、分析、チャネルなどの他の機能にアクセスします。
 
    ![](../media/ex2-travel-g95.png)
 
-1. Click **Add** to create a new agent that will collaborate with your existing Safe Travels Agent.
+1. **[追加]** をクリックして、既存の Safe Travels Agent と連携する新しいエージェントを作成します。
 
    ![](../media/ex2-travel-g96.png)
 
-1. Select the **Leave Manager Agent** from the available agents to connect.
+1. 利用可能なエージェントから **Leave Manager Agent** を選択して接続します。
 
    ![](../media/ex2-travel-g98.png)
 
-1. Review the agent configuration and click **Add and configure** to complete the connection.
+1. エージェントの設定を確認し、**[追加して設定]** をクリックして接続を完了します。
 
    ![](../media/sfimg14.png)
 
-1. In the **Safe Travels Agent** interface, go to the **Agents** tab and click **Settings** to configure the agent settings.
+1. **Safe Travels Agent** インターフェースで、**[エージェント]** タブに移動し、**[設定]** をクリックしてエージェントの設定を構成します。
 
    ![](../media/sfimg15.png)
 
-1. Navigate to **Generative AI (1)** settings, ensure **Yes (2)** is selected for orchestration, and click **Save (3)**.
+1. **[生成 AI (1)]** 設定に移動し、オーケストレーションに **[はい (2)]** が選択されていることを確認して、**[保存 (3)]** をクリックします。
 
    ![](../media/ex2-travel-g104.png)
 
-1. Now on **Agent (1)** tab, select the **Leave Manager Agent (2)**.
+1. **[エージェント (1)]** タブで **[Leave Manager Agent (2)]** を選択します。
 
    ![](../media/ex2-travel-g108.png)
 
-1. Click **Publish** to publish the Leave Manager Agent.
+1. **[公開]** をクリックして Leave Manager Agent を公開します。
 
    ![](../media/ex2-travel-g109.png)
 
-1. In the publish dialog, click **Publish** to confirm.
+1. 公開ダイアログで **[公開]** をクリックして確定します。
 
    ![](../media/ex2-travel-g110.png)
 
-1. Navigate back to the **Safe Travels Agent (2)** from the agents list.
+1. エージェント一覧から **[Safe Travels Agent (2)]** に戻ります。
 
    ![](../media/ex2-travel-g111.png)
 
-1. Click **Publish** to publish the Safe Travels Agent with the connected Leave Manager Agent.
+1. **[公開]** をクリックして、接続された Leave Manager Agent を含む Safe Travels Agent を公開します。
 
    ![](../media/ex2-travel-g112.png)
 
-1. In the publish dialog, click **Publish** to confirm.
+1. 公開ダイアログで **[公開]** をクリックして確定します。
 
    ![](../media/ex2-travel-g113.png)
 
-1. Click **Test** to test the agent functionality on **Safe Travels Agent**.
+1. **[テスト]** をクリックして、**Safe Travels Agent** のエージェント機能をテストします。
 
-1. In the test chat, enter the following **prompt (1)** and then select **Send (2)**.
+1. テスト チャットで次の**プロンプト (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
    Check Leave balance
@@ -440,7 +439,7 @@ In this task, you will learn how the power of distributed AI systems, where spec
 
    ![](../media/sfimg16.png)
 
-1. When prompted, enter the following **Employee ID (1)** and then select **Send (2)**.
+1. 入力を求められたら、次の**従業員 ID (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
    1234
@@ -448,22 +447,22 @@ In this task, you will learn how the power of distributed AI systems, where spec
 
    ![](../media/ex2-travel-g85.png)
 
-   > **Multi-Agent Success:** The seamless handoff between your Safe Travels agent and Leave Manager agent demonstrates successful orchestration, where specialized agents collaborate to provide comprehensive business solutions.
+   > **マルチエージェントの成功:** Safe Travels エージェントと Leave Manager エージェント間のシームレスなハンドオフは、オーケストレーションが成功したことを示しており、専門化されたエージェントが連携して包括的なビジネス ソリューションを提供しています。
 
 <validation step="e50761be-041a-4631-8e82-ca3952b8aa3a" />
  
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **タスクの完了、おめでとうございます!** 次は検証を行いましょう。以下の手順に従ってください。
+> - 該当するタスクの [検証] ボタンをクリックしてください。成功メッセージが表示されたら、次のタスクに進むことができます。
+> - 表示されない場合は、エラー メッセージをよく読んで手順を再確認し、ラボ ガイドの指示に従って再試行してください。
+> - サポートが必要な場合は、cloudlabs-support@spektrasystems.com までお問い合わせください。24 時間 365 日対応しています。
 
-## Summary
+## まとめ
 
-In this exercise, you successfully enhanced your conversational AI system with advanced business automation capabilities. You have accomplished:
+この演習では、会話型 AI システムを高度なビジネス自動化機能で強化することに成功しました。以下を達成しました。
 
-- **Created comprehensive travel approval workflows** that integrate with Microsoft Teams for real-time business process automation
-- **Built a specialized Leave Manager agent** with organizational knowledge sources and domain-specific expertise
-- **Established multi-agent orchestration** enabling seamless collaboration between different AI agents
-- **Implemented end-to-end business processes** from conversation initiation to Teams notification and cross-agent routing
+- **包括的な出張承認ワークフローを作成し**、リアルタイムのビジネス プロセス自動化のために Microsoft Teams と統合しました。
+- **組織のナレッジ ソースとドメイン固有の専門知識を持つ専門化された Leave Manager エージェントを構築**しました。
+- **マルチエージェント オーケストレーションを確立**し、異なる AI エージェント間のシームレスな連携を実現しました。
+- **会話の開始から Teams 通知およびエージェント間のルーティングまでのエンドツーエンドのビジネス プロセスを実装**しました。
 
-### You have successfully completed the Lab!
+### ラボが正常に完了しました!

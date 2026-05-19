@@ -1,53 +1,53 @@
-# Lab Overview: Build and Enhance a Safe Travels Agent with Multi-Agent Orchestration
+# ラボ概要: マルチエージェント オーケストレーションによる Safe Travels エージェントの構築と強化
 
-### Estimated Duration: 1 Hour
+### 推定所要時間: 1 時間
 
-## Lab Introduction
+## ラボの紹介
 
-In this hands-on lab, you will build intelligent conversational agents using Microsoft Copilot Studio and explore multi-agent orchestration. You'll create a travel assistant agent from the Safe Travels template, add business process automation, and build a multi-agent system where specialized agents work together.
+このハンズオン ラボでは、Microsoft Copilot Studio を使用してインテリジェントな会話型エージェントを構築し、マルチエージェント オーケストレーションについて学びます。Safe Travels テンプレートから出張支援エージェントを作成し、ビジネス プロセスの自動化を追加して、専門化されたエージェントが連携するマルチエージェント システムを構築します。
 
-You'll build a practical system that handles travel questions and leave inquiries with automated approval workflows integrated with Microsoft Teams.
+出張に関する質問や休暇照会に対応し、Microsoft Teams と統合された自動承認ワークフローを備えた実践的なシステムを構築します。
 
-## Learning Objectives
+## 学習目標
 
-By completing this lab, you will be able to:
+このラボを完了すると、以下のことができるようになります。
 
-- **Build AI Agents:** Create and customize conversational agents using Microsoft Copilot Studio templates
-- **Implement Business Automation:** Design Agent Flows that automate business processes and integrate with Teams
-- **Deploy Enterprise Solutions:** Publish agents to Microsoft Teams and Microsoft 365 Copilot
-- **Learn Multi-Agent Systems:** Configure specialized agents to work together and delegate tasks
+- **AI エージェントの構築:** Microsoft Copilot Studio テンプレートを使用して会話型エージェントを作成およびカスタマイズします。
+- **ビジネス自動化の実装:** ビジネス プロセスを自動化し、Teams と統合するエージェント フローを設計します。
+- **エンタープライズ ソリューションの展開:** エージェントを Microsoft Teams および Microsoft 365 Copilot に公開します。
+- **マルチエージェント システムの習得:** 専門化されたエージェントを設定して連携させ、タスクを委任できるようにします。
 
-## Prerequisites
+## 前提条件
 
-- Microsoft 365 Admin Tenant credentials with Copilot Studio permissions
-- Access to Microsoft Copilot Studio environment
-- Microsoft Teams administrative permissions
-- Basic understanding of business process automation
+- Copilot Studio 権限を持つ Microsoft 365 管理テナントの資格情報
+- Microsoft Copilot Studio 環境へのアクセス
+- Microsoft Teams の管理権限
+- ビジネス プロセス自動化に関する基本的な理解
 
-## Key Components
+## 主要コンポーネント
 
-- **Microsoft Copilot Studio:** Development environment for creating and managing AI agents
-- **Safe Travels Agent:** Travel assistance agent with policy integration and approval workflows
-- **Leave Manager Agent:** Specialized agent for employee leave management
-- **Agent Flows:** Workflow automation with Teams integration
-- **Multi-Agent Orchestration:** System enabling agents to collaborate automatically
+- **Microsoft Copilot Studio:** AI エージェントを作成および管理するための開発環境です。
+- **Safe Travels エージェント:** ポリシー統合と承認ワークフローを備えた出張支援エージェントです。
+- **Leave Manager エージェント:** 従業員の休暇管理に特化したエージェントです。
+- **エージェント フロー:** Teams 統合を備えたワークフロー自動化です。
+- **マルチエージェント オーケストレーション:** エージェントが自動的に連携できるシステムです。
 
-## Lab Exercises
+## ラボ演習
 
-### Exercise 1: Safe Travels Agent Creation & Teams Deployment (30 minutes)
-Create and deploy your first AI agent using the Safe Travels template, test conversational capabilities, and publish to Microsoft Teams.
+### 演習 1: Safe Travels エージェントの作成と Teams への展開 (30 分)
+Safe Travels テンプレートを使用して最初の AI エージェントを作成および展開し、会話機能をテストして Microsoft Teams に公開します。
 
-### Exercise 2: Agent Flows & Multi-Agent Orchestration (30 minutes)
-Build business process automation with travel approval flows and experience multi-agent orchestration by connecting Safe Travels with a Leave Manager agent.
+### 演習 2: エージェント フローとマルチエージェント オーケストレーション (30 分)
+出張承認フローによるビジネス プロセス自動化を構築し、Safe Travels と Leave Manager エージェントを接続することでマルチエージェント オーケストレーションを体験します。
 
-## Business Impact
+## ビジネスへの影響
 
-This lab delivers practical skills for:
-- Improved employee productivity through automated agent systems
-- Enhanced user experience with conversational interfaces
-- Streamlined business processes with reduced manual overhead
-- Scalable AI solutions that grow with business needs
+このラボは以下の実践的なスキルを提供します。
+- 自動化されたエージェント システムによる従業員の生産性向上
+- 会話型インターフェースによるユーザー エクスペリエンスの強化
+- 手動作業を削減したビジネス プロセスの効率化
+- ビジネスの成長に合わせてスケールする AI ソリューション
 
-Now, click on the **Next** from lower right corner to move on next page.
+右下隅の **[次へ]** をクリックして次のページに進んでください。
 
    ![](../media/a-gs-g1.png)
