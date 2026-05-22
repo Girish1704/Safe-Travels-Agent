@@ -31,8 +31,8 @@
 
    | 項目 | 値 |
    |-----|-------|
-   | Team name **(1)** | `HR Team` |
-   | First channel **(2)** | `Travel Approvals` |
+   | チーム名 **(1)** | `HR Team` |
+   | 最初のチャネル名 **(2)** | `Travel Approvals` |
 
    ![Create Team](../media/ex2-travel-g2.png)
 
@@ -50,7 +50,7 @@
 
    > **ワークフローの基盤:** このトリガーにより、エージェントがユーザーとの会話に基づいてビジネス プロセスを自動的に開始できるようになり、会話型 AI とビジネス オペレーションのシームレスな統合が実現します。
 
-1. トリガー ノードの下の **[入力の追加]** をクリックして、エージェントがワークフローに渡すデータ パラメーターを定義します。
+1. トリガー ノードの下の **[入力を追加する]** をクリックして、エージェントがワークフローに渡すデータ パラメーターを定義します。
 
    ![](../media/saf-tra-cor-v2-g18.png)
 
@@ -100,19 +100,19 @@
 
    | 項目 | 値 |
    |-----|-------|
-   | Post as **(1)** | フロー ボット |
-   | Post in **(2)** | チャネル |
-   | Team **(3)** | HR Team |
-   | Channel **(4)** | Travel Approvals |
-   | Message **(5)** | `Travel request from Employee ID: [Employee ID], Purpose: [Purpose]` |
+   | 投稿者 **(1)** | フロー ボット |
+   | 投稿先 **(2)** | チャネル |
+   | チーム **(3)** | HR Team |
+   | チャネル **(4)** | Travel Approvals |
+   | メッセージ **(5)** | `従業員ID: [Employee ID] からの出張申請、目的: [Purpose] ` |
 
-   ![Search Teams](../media/ex2-travel-g15.png)
+   ![Search Teams](../media/ex2-travel-g15-jp.png)
 
-   > **Teams 統合のメリット:** この設定により、出張承認リクエストが指定された HR チーム チャネルに自動的に投稿され、適切な監査証跡を持つ集中型の承認ワークフローが作成されます。
+   > **Teams 統合のメリット:** この設定により、出張承認リクエストが指定された HR Team チャネルに自動的に投稿され、適切な監査ログを持つ集中型の承認ワークフローが作成されます。
 
 1. メッセージ ボックスの **[Employee ID] (1)** をハイライトし、**[動的コンテンツ (2)]** アイコンをクリックして Employee ID 変数を挿入します。
 
-   ![Post Message Action](../media/ex2-travel-g16.png)
+   ![Post Message Action](../media/ex2-travel-g16-jp.png)
 
 1. **[動的コンテンツ]** パネルで、「エージェントがフローを呼び出したとき」セクションの下にある **[Employee ID]** を選択します。
 
@@ -120,43 +120,43 @@
 
 1. メッセージの **[Purpose] (1)** をハイライトし、**[動的コンテンツ (2)]** アイコンをクリックして Purpose 変数を挿入します。
 
-   ![Login Credentials](../media/ex2-travel-g18.png)
+   ![Login Credentials](../media/ex2-travel-g18-jp.png)
 
 1. **Employee ID** と **Purpose (1)** の両方の動的な値が正しく追加されていることを確認したら、**[追加 (2)]** アイコンをクリックして次のアクションを挿入します。
 
-   ![Configure Teams](../media/ex2-travel-g19.png)
+   ![Configure Teams](../media/ex2-travel-g19-jp.png)
 
 1. **[アクションの追加]** ウィンドウで、**[スキル (1)]** を検索し、**[エージェントへの応答 (2)]** を選択します。
 
    ![Message Configuration](../media/saf-tra-cor-v2-g21.png)
 
-1. **[エージェントへの応答]** アクションの下の **[出力の追加 ]** をクリックして、返答メッセージを定義します。
+1. **[エージェントへの応答]** アクションの下の **[出力を追加する]** をクリックして、返答メッセージを定義します。
 
-   ![Dynamic Content](../media/ex2-travel-g21.png)
+   ![Dynamic Content](../media/ex2-travel-g21-jp.png)
 
 1. エージェントへの応答の出力タイプとして **[テキスト]** を選択します。
 
-   ![Parameters Complete](../media/ex2-travel-g22.png)
+   ![Parameters Complete](../media/ex2-travel-g22-jp.png)
 
 1. 出力設定に以下の詳細を入力します。
 
    | 項目 | 値 |
    |-----|-------|
-   | Name **(1)** | `Output` |
-   | Value **(2)** | `Request submitted` |
-   | Description **(3)** | `Confirmation message for travel request` |
+   | 名前 **(1)** | `出力` |
+   | 値 **(2)** | `リクエスト送信済み` |
+   | 説明 **(3)** | `出張リクエストの確認メッセージ` |
 
-   ![Close Parameters](../media/ex2-travel-g23.png)
+   ![Close Parameters](../media/ex2-travel-g23-jp.png)
 
 1. 左側の **Travel Approval Flow** をフロー名として入力します。 
 
    ![Close Parameters](../media/ex2-travel-g23(a).png)
 
-1. **[下書きの保存]** をクリックして、現在のフロー設定を公開前に保存します。
+1. **[下書きを保存する]** をクリックして、現在のフロー設定を公開前に保存します。
 
-   ![Add Second Action](../media/ex2-travel-g24.png)
+   ![Add Second Action](../media/ex2-travel-g24-jp.png)
 
-1. ページの上部に **「下書きフローを保存しました。公開後にテストして実行できます。」** という確認メッセージが表示されることを確認します。
+1. ページの上部に **「下書きフローを保存しました。公開後にテストして実行してください。」** という確認メッセージが表示されることを確認します。
 
    ![Respond to Agent](../media/ex2-travel-g25.png)
 
@@ -177,9 +177,9 @@
 
 1. **Copilot Studio** で **Safe Travels Agent** を開き、ドロップダウン メニューから **[トピック]** を選択します。
 
-   ![Overview Tab](../media/ex2-travel-g30.png)
+   ![Overview Tab](../media/ex2-travel-g30-jp.png)
 
-1. **[トピック]** タブで、**[トピックの追加 (1)]** をクリックし、ドロップダウン メニューから **[Copilot を使用して説明から追加 (2)]** を選択します。
+1. **[トピック]** タブで、**[トピックの追加 (1)]** をクリックし、ドロップダウン メニューから **[Copilot で説明をもとに追加する (2)]** を選択します。
 
    ![Add to Agent](../media/ex2-travel-g31.png)
 
@@ -187,10 +187,10 @@
 
    | 項目 | 値 |
    |-----|-------|
-   | Name your topic **(1)** | `Travel Approval` |
-   | Create a topic to... **(2)** | `This topic should get the Employee ID (Number) and Purpose of travel (Text) details from the user and invoke the Tool "Request Travel Approval Flow"` |
+   | トピック名を指定する **(1)** | `Travel Approval` |
+   | トピックを作成する... **(2)** | `このトピックでは、ユーザーから従業員ID（番号）と出張目的（テキスト）を取得し、"Request Travel Approval Flow" ツールを起動します。 ` |
 
-   ![](../media/cor-g-g12.png)
+   ![](../media/cor-g-g12-jp.png)
 
 1. 既存のメッセージ ノードを次の手順で削除します。
    - **その他のオプション (1):** メッセージ ノードの**省略記号 (...)** アイコンをクリックします。
@@ -203,7 +203,7 @@
    ![Confirm Publish](../media/cor-g-g17.png)
 
 1. 出張承認フロー ツールを以下の手順で追加します。
-   - **[ツールの追加 (1)]:** オプション メニューから **[ツールの追加]** を選択します。
+   - **[ツールを追加する (1)]:** オプション メニューから **[ツールを追加する]** を選択します。
    - **[Travel Approval Flow (2)]:** ツールの一覧から **[Travel Approval Flow]** を選択してトピックにリンクします。
 
       ![](../media/cor-g-g18.png)
@@ -222,7 +222,7 @@
  
    ![](../media/cor-g-g20.png)
 
-1. アクション メニューから **[メッセージの送信]** を選択して、ユーザーへの確認メッセージを表示します。
+1. アクション メニューから **[メッセージを送信する]** を選択して、ユーザーへの確認メッセージを表示します。
  
    ![](../media/cor-g-g21.png)
 
@@ -236,23 +236,23 @@
 
 1. **[概要 (1)]** タブに移動し、**[公開 (2)]** をクリックしてエージェントの更新を反映させます。
 
-   ![Teams Notification](../media/ex2-travel-g56(a).png) 
+   ![Teams Notification](../media/ex2-travel-g56(a)-jp.png) 
 
-1. **[このエージェントを公開]** ダイアログ ボックスで、**[公開]** をクリックして確定し、エージェントを展開します。
+1. **[このエージェントを公開する]** ダイアログ ボックスで、**[公開]** をクリックして確定し、エージェントを展開します。
 
    ![Teams Notification](../media/saf-tra-cor-v2-g22.png)
 
 1. エージェントが正常に公開されたら、**[テスト]** をクリックして Copilot エージェントを確認および操作します。
 
-   ![Teams Notification](../media/ex2-travel-g59.png)
+   ![Teams Notification](../media/ex2-travel-g59-jp.png)
 
 1. テスト チャットで次の**プロンプト (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
-   I need travel approval
+   出張の承認が必要です
    ```
 
-   ![](../media/cor-g-g23.png)
+   ![](../media/cor-g-g23-jp.png)
 
 1. **「従業員 ID は何ですか?」** と質問されたら、次の**応答 (1)** を入力し、**[送信 (2)]** を選択します。
 
@@ -260,31 +260,31 @@
    117
    ```
 
-   ![](../media/ex2-travel-g61.png)
+   ![](../media/ex2-travel-g61-jp.png)
 
 1. **「出張の目的は何ですか?」** と聞かれたら、次の**応答 (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
-   Client meeting
+   クライアントとの打ち合わせ
    ```
 
-   ![](../media/ex2-travel-g62.png)
+   ![](../media/ex2-travel-g62-jp.png)
 
 1. Microsoft Teams の接続アクセスを求めるプロンプトが表示されたら、**[許可]** をクリックして統合を承認し、フローが Teams に出張リクエストを投稿できるようにします。
 
-   ![](../media/ex2-travel-g63.png)
+   ![](../media/ex2-travel-g63-jp.png)
 
-1. Microsoft Teams 接続が承認されたら、確認メッセージ **Request submitted** が表示されることを確認します。これは出張承認リクエストが正常に処理されたことを示します。
+1. Microsoft Teams 接続が承認されたら、確認メッセージ **リクエスト送信済み** が表示されることを確認します。これは出張承認リクエストが正常に処理されたことを示します。
 
-   ![](../media/ex2-travel-g64.png)
+   ![](../media/ex2-travel-g64-jp.png)
 
 1. Microsoft Teams でメッセージが投稿されていることを以下の手順で確認します。
    - **[チャット (1)]:** **[チャット]** タブを開きます。
    - **[チーム (2)]:** **[HR Team]** を選択します。
    - **[チャネル (3)]:** **[Travel Approvals]** を開きます。
-   - **[メッセージ (4)]:** 投稿が `Travel request from Employee ID: 117, Purpose: Client meeting` として表示されていることを確認します。
+   - **[メッセージ (4)]:** 投稿が `従業員ID: 177 からの出張申請、目的: クライアントとの打ち合わせ` として表示されていることを確認します。
 
-      ![](../media/ex2-travel-g65.png)
+      ![](../media/ex2-travel-g65-jp.png)
 
       > **フローの検証:** 出張承認フローのテストが成功すると、エージェントが実際のビジネス プロセスをトリガーし、エンタープライズ コラボレーション ツールと統合できることが確認されます。
 
@@ -292,15 +292,15 @@
 
 このタスクでは、分散 AI システムの強みを学びます。専門化されたエージェントが特定のビジネス ドメインを担当しながら、インテリジェントなルーティングと連携を通じて統一されたユーザー エクスペリエンスを維持します。
 
-1. 左メニューから **[エージェント (1)]** を選択して、**Leave Manager Agent(2)** に移動します。
+1. 左メニューから **[エージェント (1)]** を選択して、**Leave Manager Agent (2)** に移動します。
 
    ![](../media/sfimg11.png)
 
 1. 上部の**メニュー**から **[トピック]** を選択して、エージェントの会話トピックを作成または管理します。
 
-   ![](../media/ex2-travel-g75.png)
+   ![](../media/ex2-travel-g75-jp.png)
 
-1. **[トピックの追加 (1)]** をクリックし、**[Copilot を使用して説明から追加 (2)]** を選択して、自然言語の説明からトピックを自動生成します。
+1. **[トピックの追加 (1)]** をクリックし、**[Copilot で説明をもとに追加する (2)]** を選択して、自然言語の説明からトピックを自動生成します。
 
    ![](../media/ex2-travel-g76.png)
 
@@ -308,10 +308,10 @@
 
    | 項目 | 値 |
    |-----|-------|
-   | Name your topic **(1)** | `Leave Balance Checker` |
-   | Create a topic to... **(2)** | `Get the Employee ID from the user and check and reply with the leave balance based on the tracker added as knowledge source.` |
+   | トピック名を指定する **(1)** | `Leave Balance Checker` |
+   | トピックを作成する... **(2)** | `ユーザーから従業員IDを取得し、ナレッジ ソースとして追加されたトラッカーに基づいて休暇残高を確認し、返信してください。` |
 
-   ![](../media/ex2-travel-g80.png)
+   ![](../media/ex2-travel-g80-jp.png)
 
 1. トピック フローを確認し、**メッセージ** ノードのメニューで **[...] (1)** をクリックして **[削除] (2)** を選択します。
 
@@ -333,7 +333,7 @@
 
    ![](../media/sfimg20.png)
 
-1. 完了したら、**[編集]** をクリックしてナレッジ ソースを設定します。
+1. 完了したら、**[編集する]** をクリックしてナレッジ ソースを設定します。
 
    ![](../media/sfimg22.png)
 
@@ -352,10 +352,10 @@
 1. テスト チャットで次の**プロンプト (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
-   Check Leave balance
+   休暇残高を確認する
    ```
 
-   ![](../media/ex2-travel-g84.png)
+   ![](../media/ex2-travel-g84-jp.png)
 
 1. 入力を求められたら、次の**従業員 ID (1)** を入力し、**[送信 (2)]** を選択します。
 
@@ -363,7 +363,7 @@
    1234
    ```
 
-   ![](../media/ex2-travel-g85.png)
+   ![](../media/ex2-travel-g85-jp.png)
 
 1. Leave Manager エージェントが、従業員 ID 1234 (John Doe) の休暇残高が **2 日**であることを表示することを確認します。これは、専門化されたエージェントがシームレスに連携するマルチエージェント オーケストレーションの実際の動作を示しています。
 
@@ -381,9 +381,9 @@
 
    ![](../media/saf-tra-cor-v2-g14(a).png)
 
-1. 。**[エージェント (1)]** を選択して、エージェントの管理またはトピック、アクティビティ、分析、チャネルなどの他の機能にアクセスします。
+1. **[エージェント (1)]** を選択して、エージェントの管理またはトピック、アクティビティ、分析、チャネルなどの他の機能にアクセスします。
 
-   ![](../media/ex2-travel-g95.png)
+   ![](../media/ex2-travel-g95-jp.png)
 
 1. **[追加]** をクリックして、既存の Safe Travels Agent と連携する新しいエージェントを作成します。
 
@@ -393,9 +393,9 @@
 
    ![](../media/ex2-travel-g98.png)
 
-1. エージェントの設定を確認し、**[追加して設定]** をクリックして接続を完了します。
+1. エージェントの設定を確認し、**[追加と設定]** をクリックして接続を完了します。
 
-   ![](../media/sfimg14.png)
+   ![](../media/sfimg14-jp.png)
 
 1. **Safe Travels Agent** インターフェースで、**[エージェント]** タブに移動し、**[設定]** をクリックしてエージェントの設定を構成します。
 
@@ -411,7 +411,7 @@
 
 1. **[公開]** をクリックして Leave Manager Agent を公開します。
 
-   ![](../media/ex2-travel-g109.png)
+   ![](../media/ex2-travel-g109-jp.png)
 
 1. 公開ダイアログで **[公開]** をクリックして確定します。
 
@@ -423,7 +423,7 @@
 
 1. **[公開]** をクリックして、接続された Leave Manager Agent を含む Safe Travels Agent を公開します。
 
-   ![](../media/ex2-travel-g112.png)
+   ![](../media/ex2-travel-g112-jp.png)
 
 1. 公開ダイアログで **[公開]** をクリックして確定します。
 
@@ -434,10 +434,10 @@
 1. テスト チャットで次の**プロンプト (1)** を入力し、**[送信 (2)]** を選択します。
 
    ```
-   Check Leave balance
+   休暇残高を確認する
    ```
 
-   ![](../media/sfimg16.png)
+   ![](../media/sfimg16-jp.png)
 
 1. 入力を求められたら、次の**従業員 ID (1)** を入力し、**[送信 (2)]** を選択します。
 
@@ -445,9 +445,9 @@
    1234
    ```
 
-   ![](../media/ex2-travel-g85(a).png)
+   ![](../media/ex2-travel-g85(a)-jp.png)
 
-   > **マルチエージェントの成功:** Safe Travels エージェントと Leave Manager エージェント間のシームレスなハンドオフは、オーケストレーションが成功したことを示しており、専門化されたエージェントが連携して包括的なビジネス ソリューションを提供しています。
+   > **マルチ エージェントの成功:** Safe Travels エージェントと Leave Manager エージェント間のシームレスなハンドオフは、オーケストレーションが成功したことを示しており、専門化されたエージェントが連携して包括的なビジネス ソリューションを提供しています。
 
 <validation step="e50761be-041a-4631-8e82-ca3952b8aa3a" />
  
